@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SomLibrary.RectNeuronMap">
+    <Position X="1" Y="3.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QAAAABAEAAAACAAgCABAgABAAAgAgAAABAgAAAAQAAg=</HashCode>
+      <FileName>NeuronMaps\RectNeuronMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomLibrary.HexNeuronMap">
+    <Position X="4.25" Y="3.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="SomLibrary.HexNeuronMap.MapShape" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>NeuronMaps\HexNeuronMap.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAgAAAAgAAQAAAAAAAAAAAAAAACAAg=</HashCode>
+      <FileName>NeuronMaps\HexNeuronMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomLibrary.NeuronMapWithWeightEnum">
+    <Position X="1" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>NeuronMaps\NeuronMapWithWeightEnum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomLibrary.NeuronMap" Collapsed="true">
+    <Position X="1" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgICAAAgAAAAAAQAAAAAkAAAAAAAAA=</HashCode>
+      <FileName>NeuronMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomLibrary.Algorithms.SOM" Collapsed="true">
+    <Position X="8.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEgAAIABJCAQCAAARABAAACBFAACDgQAAAAQYAAAAQ=</HashCode>
+      <FileName>Algorithms\SOM.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SomLibrary.BufferedFileInputLayer" Collapsed="true">
+    <Position X="8.5" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAABAASAAgAAAEYAAQAAAEAIiAAAAAAgQ=</HashCode>
+      <FileName>BufferedFileInputLayer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SomLibrary.FileInputLayer" Collapsed="true">
+    <Position X="8.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAABAAQIAhAAAEYBAQAABEAICAAAgQAgQ=</HashCode>
+      <FileName>FileInputLayer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

@@ -1,0 +1,142 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">True</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:General/f:Complex.cs" caret="1603" fromTop="36" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/f:CustomDictionary.xml" caret="64" fromTop="2" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Matrix.cs" caret="13272" fromTop="16" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:General/f:BasicMath.cs" caret="202" fromTop="10" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="30476" fromTop="11" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="17506" fromTop="16" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:FFT/f:Fourier.cs" caret="3779" fromTop="14" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexVector.cs" caret="18038" fromTop="23" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="28459" fromTop="17" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="28832" fromTop="14" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="29590" fromTop="25" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="30514" fromTop="30" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="30971" fromTop="26" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="31312" fromTop="22" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="31073" fromTop="6" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="31583" fromTop="18" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="31976" fromTop="24" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="32338" fromTop="22" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:General/f:Complex.cs" caret="13203" fromTop="7" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:General/f:Complex.cs" caret="13137" fromTop="14" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:General/f:Complex.cs" caret="13371" fromTop="22" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:General/f:Complex.cs" caret="2796" fromTop="12" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="12422" fromTop="12" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="4388" fromTop="6" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="13182" fromTop="18" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="13805" fromTop="15" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="576" fromTop="0" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="29699" fromTop="29" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:FFT/f:Fourier.cs" caret="4635" fromTop="23" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:FFT/f:Fourier.cs" caret="280" fromTop="13" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:FFT/f:Fourier.cs" caret="2253" fromTop="14" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:FFT/f:Fourier.cs" caret="3045" fromTop="14" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:General/f:BasicMath.cs" caret="303" fromTop="15" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:General/f:BasicMath.cs" caret="202" fromTop="10" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexVector.cs" caret="18038" fromTop="25" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexVector.cs" caret="18038" fromTop="14" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexVector.cs" caret="18038" fromTop="14" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="17506" fromTop="10" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="ArgumentException" priority="2" />
+      <Item value="Matrix" priority="0" />
+      <Item value="Vector" priority="8" />
+      <Item value="if" priority="7" />
+      <Item value="lhs" priority="25" />
+      <Item value="VectorType" priority="1" />
+      <Item value="throw" priority="5" />
+      <Item value="new" priority="11" />
+      <Item value="return" priority="26" />
+      <Item value="result" priority="3" />
+      <Item value="this" priority="0" />
+      <Item value="for" priority="2" />
+      <Item value="i" priority="7" />
+      <Item value="_Columns" priority="0" />
+      <Item value="int" priority="1" />
+      <Item value="_Rows" priority="0" />
+      <Item value="col" priority="0" />
+      <Item value="_Values" priority="1" />
+      <Item value="ICloneable" priority="1" />
+      <Item value="minIdx" priority="0" />
+      <Item value="ArgumentOutOfRangeException" priority="5" />
+      <Item value="rhs" priority="17" />
+      <Item value="arg" priority="1" />
+      <Item value="ArgumentNullException" priority="2" />
+      <Item value="Orientation" priority="0" />
+      <Item value="Complex" priority="8" />
+      <Item value="IFormatProvider" priority="0" />
+      <Item value="CultureInfo" priority="0" />
+      <Item value="ComplexVector" priority="1" />
+      <Item value="_mat" priority="1" />
+      <Item value="double" priority="1" />
+      <Item value="static" priority="1" />
+      <Item value="bool" priority="0" />
+      <Item value="operator" priority="0" />
+      <Item value="true" priority="1" />
+      <Item value="false" priority="0" />
+      <Item value="ComplexMatrix" priority="1" />
+      <Item value="r" priority="0" />
+      <Item value="c" priority="0" />
+      <Item value="rand" priority="0" />
+      <Item value="val" priority="1" />
+      <Item value="public" priority="0" />
+      <Item value="else" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.Vector">
+      <Item value="Length" priority="2" />
+      <Item value="Type" priority="0" />
+      <Item value="_mat" priority="0" />
+      <Item value="Orientation" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MathLib.Matrices.VectorType">
+      <Item value="RowVector" priority="0" />
+      <Item value="ColumnVector" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.Matrix">
+      <Item value="_Rows" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Globalization.CultureInfo">
+      <Item value="CurrentCulture" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.ComplexMatrix">
+      <Item value="_Values" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Complex">
+      <Item value="Re" priority="2" />
+      <Item value="Norm" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Double">
+      <Item value="MaxValue" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.ComplexVector">
+      <Item value="Norm" priority="1" />
+      <Item value="Orientation" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Random">
+      <Item value="NextDouble" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

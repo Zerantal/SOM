@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MathLib.Evolution.ESObject&lt;T&gt;">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgABAAABAgAAAAAQAAAAgAAAoAAAAACAAEAAAAAAA=</HashCode>
+      <FileName>Evolution\ESObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MathLib.Evolution.EvolutionEngine&lt;T&gt;" Collapsed="true">
+    <Position X="0.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAACCBAGAAAACIAAIAAAIIEQAAABAAA=</HashCode>
+      <FileName>Evolution\EvolutionEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MathLib.Evolution.IEvolvableObject&lt;T&gt;" Collapsed="true">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Evolution\IEvolvableObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MathLib.Evolution.IESSolution&lt;T&gt;" Collapsed="true">
+    <Position X="1.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAIAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Evolution\IESSolution.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MathLib.Matrices.Matrix" Collapsed="true">
+    <Position X="1.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Matrices\Matrix.cs</FileName>
+      <HashCode>AAUCQAAAAQAEAEAEyAAAACAAAAAAAAIAAAAgAAgAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MathLib.Matrices.SparseMatrix" Collapsed="true">
+    <Position X="3.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Matrices\SparseMatrix.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MathLib.Matrices.Vector" Collapsed="true">
+    <Position X="1.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Matrices\Vector.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAgAEKAEAAABAAAAAAAAAAwAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

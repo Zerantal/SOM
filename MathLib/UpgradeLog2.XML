@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MathLib">
+</Property><Property Name="Solution File" Value="C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\MathLib.sln">
+</Property><Property Name="User Options File" Value="C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\MathLib.suo">
+</Property><Property Name="Date" Value="Monday, 8 March 2010">
+</Property><Property Name="Time" Value="13:25 PM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="MathLib.sln" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\MathLib.sln">
+</Event><Event ErrorLevel="0" Project="" Source="MathLib.suo" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\MathLib.suo">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="MathLib.csproj" Description="Project file successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\MathLib.csproj">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="MathLib.csproj.user" Description="Project user file successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\MathLib.csproj.user">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="FFT\Fourier.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\FFT\Fourier.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="General\BasicMath.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\General\BasicMath.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="GlobalSuppressions.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\GlobalSuppressions.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="MathLibException.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\MathLibException.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="Matrices\ComplexMatrix.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Matrices\ComplexMatrix.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="Matrices\ComplexVector.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Matrices\ComplexVector.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="Matrices\Matrix.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Matrices\Matrix.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="Matrices\MatrixMath.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Matrices\MatrixMath.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="Matrices\SizeMismatchException.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Matrices\SizeMismatchException.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="Matrices\Vector.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Matrices\Vector.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="Matrices\SparseMatrix.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Matrices\SparseMatrix.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="Statistics\ConstantGenerator.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Statistics\ConstantGenerator.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="Statistics\Histogram.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Statistics\Histogram.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="Statistics\INumberGenerator.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Statistics\INumberGenerator.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="Statistics\NormalRandomGenerator.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Statistics\NormalRandomGenerator.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="Statistics\UniformRandomGenerator.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Statistics\UniformRandomGenerator.cs">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="MathLibKey.snk" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\MathLibKey.snk">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="Matrices\MatrixClasses.cd" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Matrices\MatrixClasses.cd">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="myKeyPair.snk" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\myKeyPair.snk">
+</Event><Event ErrorLevel="0" Project="MathLib" Source="MathLib.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="MathLib" Source="MathLib.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="1" Project="Util" Source="..\Util\Util.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Util" Source="..\Util\Util.csproj" Description="Project file successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Util\Util.csproj">
+</Event><Event ErrorLevel="0" Project="Util" Source="..\Util\Util.csproj.user" Description="Project user file successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Util\Util.csproj.user">
+</Event><Event ErrorLevel="0" Project="Util" Source="..\Util\Constants.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Util\Constants.cs">
+</Event><Event ErrorLevel="0" Project="Util" Source="..\Util\GifAnimator.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Util\GifAnimator.cs">
+</Event><Event ErrorLevel="0" Project="Util" Source="..\Util\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Util\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Util" Source="..\Util\TODOAttribute.cs" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Util\TODOAttribute.cs">
+</Event><Event ErrorLevel="0" Project="Util" Source="..\Util\myKeyPair.snk" Description="File successfully backed up as C:\Users\toby\Documents\Work Documents\Software Projects\MathLib\Backup\Util\myKeyPair.snk">
+</Event><Event ErrorLevel="0" Project="Util" Source="..\Util\Util.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Util" Source="..\Util\Util.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="MathLib.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MathLib.sln" Description="Converted">
+</Event></UpgradeLog>

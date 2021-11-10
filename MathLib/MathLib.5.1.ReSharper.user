@@ -1,0 +1,1122 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">True</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexMatrix.cs" caret="196" fromTop="9" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:IVector.cs" caret="205" fromTop="5" />
+      <File id="8EF59C45-A0CB-40DD-AC8C-D0C946D0092C/d:Matrices/f:ComplexVectorTest.cs" caret="3773" fromTop="13" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:GenericMatrix.cs" caret="1153" fromTop="15" />
+      <File id="8EF59C45-A0CB-40DD-AC8C-D0C946D0092C/d:Matrices/f:MatrixTValueTypeTest.cs" caret="10553" fromTop="9" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexSparseMatrix.cs" caret="158" fromTop="6" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexSparseVector.cs" caret="783" fromTop="0" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:GenericSparseVector.cs" caret="1565" fromTop="13" />
+      <File id="8EF59C45-A0CB-40DD-AC8C-D0C946D0092C/d:Matrices/f:SparseVectorTValueTypeTest.cs" caret="7523" fromTop="11" />
+      <File id="8EF59C45-A0CB-40DD-AC8C-D0C946D0092C/d:Matrices/f:VectorTValueTypeTest.cs" caret="6789" fromTop="11" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:MatrixBaseContract.cs" caret="6277" fromTop="28" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:MatrixExtensions.cs" caret="587" fromTop="14" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:SparseMatrix.cs" caret="1481" fromTop="17" />
+      <File id="8EF59C45-A0CB-40DD-AC8C-D0C946D0092C/d:Matrices/f:SparseMatrixTest.cs" caret="1349" fromTop="12" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:SparseVector.cs" caret="603" fromTop="16" />
+      <File id="8EF59C45-A0CB-40DD-AC8C-D0C946D0092C/d:Matrices/f:SparseVectorTest.cs" caret="2165" fromTop="12" />
+      <File id="8EF59C45-A0CB-40DD-AC8C-D0C946D0092C/d:Matrices/f:VectorTest.cs" caret="4318" fromTop="11" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexVector.cs" caret="1186" fromTop="7" />
+      <File id="8EF59C45-A0CB-40DD-AC8C-D0C946D0092C/d:Matrices/f:SparseMatrixTValueTypeTest.cs" caret="4644" fromTop="26" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Evolution/f:GraphChromosome.cs" caret="533" fromTop="16" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:GenericSparseMatrix.cs" caret="278" fromTop="1" />
+      <File id="1E22CAC4-8E90-4DD7-A754-6D1EF0845230/d:JavaAccessBridge/f:JAB.cs" caret="1764" fromTop="32" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:SparseMatrixBase.cs" caret="12255" fromTop="16" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:GenericVector.cs" caret="9206" fromTop="42" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Matrix.cs" caret="564" fromTop="18" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:MatrixBase.cs" caret="3104" fromTop="32" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:DenseMatrixBase.cs" caret="9041" fromTop="16" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:IVectorContract.cs" caret="1424" fromTop="25" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="13431" fromTop="35" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Properties/f:AssemblyInfo.cs" caret="1576" fromTop="21" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="1264" fromTop="19" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="1721" fromTop="14" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="2233" fromTop="17" />
+      <File id="8EF59C45-A0CB-40DD-AC8C-D0C946D0092C/d:Matrices/f:VectorTest.cs" caret="4318" fromTop="11" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:IVectorContract.cs" caret="310" fromTop="8" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="2985" fromTop="8" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="3222" fromTop="18" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="3411" fromTop="24" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="3124" fromTop="13" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="720" fromTop="15" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="3786" fromTop="16" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="7223" fromTop="16" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="8544" fromTop="16" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="15245" fromTop="25" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:SparseMatrixBase.cs" caret="21013" fromTop="17" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:DenseMatrixBase.cs" caret="6677" fromTop="14" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:SparseMatrixBase.cs" caret="2313" fromTop="30" />
+      <File id="8EF59C45-A0CB-40DD-AC8C-D0C946D0092C/d:Matrices/f:SparseMatrixTValueTypeTest.cs" caret="4010" fromTop="13" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:SparseMatrixBase.cs" caret="10915" fromTop="19" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:SparseMatrixBase.cs" caret="7144" fromTop="16" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:SparseMatrixBase.cs" caret="7576" fromTop="24" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:SparseMatrixBase.cs" caret="7694" fromTop="28" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Evolution/f:GraphChromosome.cs" caret="817" fromTop="17" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Evolution/f:GraphChromosome.cs" caret="1136" fromTop="15" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="213" fromTop="10" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Matrix.cs" caret="564" fromTop="18" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="2558" fromTop="18" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="2833" fromTop="25" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:IVectorContract.cs" caret="1424" fromTop="25" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Properties/f:AssemblyInfo.cs" caret="1576" fromTop="21" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="ArgumentException" priority="6" />
+      <Item value="Matrix" priority="1" />
+      <Item value="Vector" priority="21" />
+      <Item value="if" priority="75" />
+      <Item value="lhs" priority="55" />
+      <Item value="VectorType" priority="1" />
+      <Item value="throw" priority="29" />
+      <Item value="new" priority="211" />
+      <Item value="return" priority="153" />
+      <Item value="result" priority="4" />
+      <Item value="this" priority="36" />
+      <Item value="for" priority="51" />
+      <Item value="i" priority="126" />
+      <Item value="_Columns" priority="0" />
+      <Item value="int" priority="261" />
+      <Item value="_Rows" priority="0" />
+      <Item value="col" priority="0" />
+      <Item value="_Values" priority="1" />
+      <Item value="ICloneable" priority="1" />
+      <Item value="minIdx" priority="0" />
+      <Item value="ArgumentOutOfRangeException" priority="5" />
+      <Item value="rhs" priority="23" />
+      <Item value="arg" priority="6" />
+      <Item value="ArgumentNullException" priority="2" />
+      <Item value="Orientation" priority="0" />
+      <Item value="Complex" priority="8" />
+      <Item value="IFormatProvider" priority="0" />
+      <Item value="CultureInfo" priority="0" />
+      <Item value="ComplexVector" priority="2" />
+      <Item value="_mat" priority="1" />
+      <Item value="double" priority="66" />
+      <Item value="static" priority="22" />
+      <Item value="bool" priority="9" />
+      <Item value="operator" priority="1" />
+      <Item value="true" priority="12" />
+      <Item value="false" priority="12" />
+      <Item value="ComplexMatrix" priority="3" />
+      <Item value="r" priority="31" />
+      <Item value="c" priority="27" />
+      <Item value="rand" priority="0" />
+      <Item value="val" priority="1" />
+      <Item value="public" priority="86" />
+      <Item value="else" priority="9" />
+      <Item value="List&lt;ESObject&lt;_2dFunctionSoln&gt;&gt;" priority="0" />
+      <Item value="List" priority="25" />
+      <Item value="Tuple`0" priority="21" />
+      <Item value="T`0" priority="97" />
+      <Item value="_currentPopulation" priority="7" />
+      <Item value="t" priority="17" />
+      <Item value="FunctionToOptimize`0" priority="4" />
+      <Item value="List&lt;FunctionToOptimize&gt;" priority="0" />
+      <Item value="initPopSize" priority="0" />
+      <Item value="soln" priority="1" />
+      <Item value="_2dFunctionSoln" priority="0" />
+      <Item value="FunctionToOptimize" priority="0" />
+      <Item value="xRange" priority="0" />
+      <Item value="minX" priority="0" />
+      <Item value="yRange" priority="0" />
+      <Item value="minY" priority="0" />
+      <Item value="initParentPopulation" priority="1" />
+      <Item value="evol" priority="2" />
+      <Item value="EvolutionEngine&lt;FunctionToOptimize&gt;" priority="0" />
+      <Item value="numParentsUD" priority="0" />
+      <Item value="numChildrenUD" priority="0" />
+      <Item value="parentsPerChildUD" priority="0" />
+      <Item value="SelectFromParents" priority="0" />
+      <Item value="selectFromParentsCheckBox" priority="0" />
+      <Item value="global" priority="0" />
+      <Item value="ICloneable`0" priority="0" />
+      <Item value="override" priority="10" />
+      <Item value="Fitness`0" priority="0" />
+      <Item value="parentPool" priority="3" />
+      <Item value="while" priority="4" />
+      <Item value="parentIdx2" priority="1" />
+      <Item value="parentIdx1" priority="2" />
+      <Item value="parent1" priority="1" />
+      <Item value="parent2" priority="1" />
+      <Item value="_x" priority="1" />
+      <Item value="additionalParent" priority="6" />
+      <Item value="_y" priority="0" />
+      <Item value="class" priority="1" />
+      <Item value="do" priority="0" />
+      <Item value="Random`0" priority="4" />
+      <Item value="rta" priority="0" />
+      <Item value="using" priority="59" />
+      <Item value="System" priority="38" />
+      <Item value="Diagnostics" priority="21" />
+      <Item value="NormalRandomGenerator" priority="1" />
+      <Item value="private" priority="47" />
+      <Item value="Random" priority="1" />
+      <Item value="DateTime`0" priority="0" />
+      <Item value="_seedCount" priority="0" />
+      <Item value="object" priority="3" />
+      <Item value="StaticRandom`0" priority="33" />
+      <Item value="lock" priority="5" />
+      <Item value="n" priority="3" />
+      <Item value="minValue" priority="4" />
+      <Item value="maxValue" priority="7" />
+      <Item value="byte" priority="0" />
+      <Item value="buffer" priority="0" />
+      <Item value="void" priority="33" />
+      <Item value="Util" priority="11" />
+      <Item value="IEvolvableObject" priority="1" />
+      <Item value="GAObject`0" priority="1" />
+      <Item value="List&lt;Chromosome&gt;" priority="1" />
+      <Item value="Genome`0" priority="1" />
+      <Item value="_genome" priority="19" />
+      <Item value="GAObject" priority="2" />
+      <Item value="InvalidOperationException`0" priority="1" />
+      <Item value="genome" priority="12" />
+      <Item value="foreach" priority="10" />
+      <Item value="Chromosome" priority="3" />
+      <Item value="Length" priority="44" />
+      <Item value="GetLowerBound`0" priority="0" />
+      <Item value="GetUpperBound`0" priority="0" />
+      <Item value="newGenome" priority="7" />
+      <Item value="IEvolvableObjectContract" priority="1" />
+      <Item value="Contracts" priority="18" />
+      <Item value="Contract`0" priority="254" />
+      <Item value="null" priority="78" />
+      <Item value="genome1" priority="3" />
+      <Item value="genome2" priority="2" />
+      <Item value="where" priority="8" />
+      <Item value="IDeepCloneable" priority="6" />
+      <Item value="abstract" priority="5" />
+      <Item value="Form`0" priority="2" />
+      <Item value="gaTestForm" priority="0" />
+      <Item value="MathLib" priority="10" />
+      <Item value="Evolution" priority="8" />
+      <Item value="GaObject" priority="7" />
+      <Item value="gaTestSolution`0" priority="2" />
+      <Item value="protected" priority="18" />
+      <Item value="base" priority="39" />
+      <Item value="Genome" priority="20" />
+      <Item value="IChromosome" priority="8" />
+      <Item value="as" priority="12" />
+      <Item value="RealChromosome" priority="2" />
+      <Item value="IChromosome`0" priority="16" />
+      <Item value="RealChromosome`0" priority="29" />
+      <Item value="Statistics" priority="1" />
+      <Item value="INumberGenerator`0" priority="1" />
+      <Item value="_genes" priority="14" />
+      <Item value="length" priority="2" />
+      <Item value="geneIinitializer" priority="0" />
+      <Item value="initialValues" priority="4" />
+      <Item value="Clone`0" priority="2" />
+      <Item value="ContractInvariantMethod" priority="11" />
+      <Item value="typeof" priority="18" />
+      <Item value="char" priority="5" />
+      <Item value="chrom" priority="2" />
+      <Item value="index" priority="3" />
+      <Item value="Int16`0" priority="1" />
+      <Item value="value" priority="10" />
+      <Item value="ValueTypeCloneable" priority="2" />
+      <Item value="ValueTypeCloneable&lt;T&gt;" priority="0" />
+      <Item value="GeneticAlgorithm" priority="0" />
+      <Item value="GeneticAlgorithm`0" priority="4" />
+      <Item value="CrossoverRate" priority="0" />
+      <Item value="MutationRate" priority="0" />
+      <Item value="EvolutionEngine" priority="0" />
+      <Item value="GaTestSolution`0" priority="6" />
+      <Item value="_evolEngine" priority="16" />
+      <Item value="EvolutionEngine&lt;GaTestSolution&gt;" priority="1" />
+      <Item value="List&lt;GaTestSolution&gt;" priority="2" />
+      <Item value="GaTestSolution" priority="4" />
+      <Item value="ToList`1" priority="0" />
+      <Item value="gaTestOutput" priority="1" />
+      <Item value="solution" priority="4" />
+      <Item value="_chromosome" priority="31" />
+      <Item value="x" priority="1" />
+      <Item value="y" priority="3" />
+      <Item value="fitnessOfSolutions" priority="0" />
+      <Item value="fitnessScores" priority="7" />
+      <Item value="Action`0" priority="0" />
+      <Item value="Func" priority="2" />
+      <Item value="SelectionMethod" priority="5" />
+      <Item value="NotImplementedException" priority="4" />
+      <Item value="_totalFitness" priority="0" />
+      <Item value="ContextStaticAttribute`0" priority="0" />
+      <Item value="AggregateFitness" priority="1" />
+      <Item value="firstParent" priority="4" />
+      <Item value="populationFitness" priority="36" />
+      <Item value="randomFitness" priority="4" />
+      <Item value="secondParent" priority="2" />
+      <Item value="Tuple&lt;T,T&gt;" priority="2" />
+      <Item value="parents" priority="3" />
+      <Item value="_elitismSelection" priority="6" />
+      <Item value="_parentCount" priority="0" />
+      <Item value="_childrenToBreed" priority="0" />
+      <Item value="numToSelect" priority="0" />
+      <Item value="_bestSolution" priority="3" />
+      <Item value="initialPopulation" priority="5" />
+      <Item value="ElitismSelection" priority="5" />
+      <Item value="runningSum" priority="2" />
+      <Item value="otherChromosome" priority="5" />
+      <Item value="AssemblyLoadEventArgs`0" priority="0" />
+      <Item value="geneNumber" priority="0" />
+      <Item value="geneIdx" priority="3" />
+      <Item value="MutationStrength" priority="2" />
+      <Item value="virtual" priority="2" />
+      <Item value="switch" priority="1" />
+      <Item value="enum" priority="1" />
+      <Item value="CrossoverMethod`0" priority="5" />
+      <Item value="AppDomainSetup`0" priority="0" />
+      <Item value="CrossoverType" priority="0" />
+      <Item value="case" priority="3" />
+      <Item value="break" priority="6" />
+      <Item value="ChromosomeType`0" priority="1" />
+      <Item value="ChromosomeType" priority="0" />
+      <Item value="retChromosome" priority="12" />
+      <Item value="ValueChromosome" priority="25" />
+      <Item value="extraChromosome" priority="4" />
+      <Item value="TChromosomeType`0" priority="1" />
+      <Item value="c1" priority="2" />
+      <Item value="T" priority="6" />
+      <Item value="Uniform" priority="0" />
+      <Item value="child" priority="9" />
+      <Item value="retSolution" priority="3" />
+      <Item value="Math`0" priority="0" />
+      <Item value="sin`0" priority="0" />
+      <Item value="_selectionMethod" priority="2" />
+      <Item value="selectionMethod" priority="1" />
+      <Item value="SelectionMethod`0" priority="0" />
+      <Item value="RouletteSelection`0" priority="0" />
+      <Item value="BestSolution" priority="2" />
+      <Item value="CurrentGeneration" priority="1" />
+      <Item value="Count`1" priority="0" />
+      <Item value="ContractClassFor" priority="2" />
+      <Item value="ContractClass" priority="1" />
+      <Item value="IChromosomeContract`0" priority="1" />
+      <Item value="Genes" priority="1" />
+      <Item value="clonedGenes" priority="0" />
+      <Item value="pt1" priority="11" />
+      <Item value="pt2" priority="5" />
+      <Item value="tmp" priority="1" />
+      <Item value="SortedDictionary" priority="1" />
+      <Item value="TVertexData`0" priority="0" />
+      <Item value="GraphEdge" priority="3" />
+      <Item value="TEdgeData`0" priority="1" />
+      <Item value="chromosomeCount" priority="0" />
+      <Item value="Collections" priority="5" />
+      <Item value="Generic" priority="0" />
+      <Item value="ObjectModel" priority="2" />
+      <Item value="Collection" priority="1" />
+      <Item value="List&lt;IChromosome&gt;" priority="0" />
+      <Item value="Collection&lt;IChromosome&gt;" priority="0" />
+      <Item value="IDeepCloneableContract" priority="0" />
+      <Item value="_currentGeneration" priority="0" />
+      <Item value="ICollection" priority="12" />
+      <Item value="g" priority="1" />
+      <Item value="List&lt;T&gt;" priority="2" />
+      <Item value="IFitnessSelector" priority="6" />
+      <Item value="_fitnessSelector" priority="4" />
+      <Item value="RouletteSelector" priority="0" />
+      <Item value="OffspringPerGeneration" priority="5" />
+      <Item value="in" priority="10" />
+      <Item value="parentPairing" priority="1" />
+      <Item value="List&lt;double&gt;" priority="1" />
+      <Item value="normalisedFitnessScores" priority="1" />
+      <Item value="minFitness" priority="6" />
+      <Item value="fitnessRange" priority="2" />
+      <Item value="IList" priority="0" />
+      <Item value="List&lt;Tuple&lt;T,T&gt;&gt;" priority="1" />
+      <Item value="parentPairsToSelect" priority="5" />
+      <Item value="Stack" priority="0" />
+      <Item value="Stack&lt;T&gt;" priority="0" />
+      <Item value="SortedList&lt;double,T&gt;" priority="1" />
+      <Item value="List&lt;int&gt;" priority="8" />
+      <Item value="N" priority="2" />
+      <Item value="normalizedFitnessScores" priority="1" />
+      <Item value="sortedRandomNumbers" priority="3" />
+      <Item value="List&lt;Tuple&lt;double,T&gt;&gt;" priority="0" />
+      <Item value="parentPairs" priority="2" />
+      <Item value="zeroedFitnessScores" priority="4" />
+      <Item value="taskDictionary" priority="1" />
+      <Item value="fitness" priority="10" />
+      <Item value="maxFitness" priority="1" />
+      <Item value="bestSoln" priority="5" />
+      <Item value="obj2" priority="0" />
+      <Item value="obj1" priority="0" />
+      <Item value="parentSelected" priority="1" />
+      <Item value="totalParents" priority="0" />
+      <Item value="aggregateFitness" priority="3" />
+      <Item value="totalParentsToSelect" priority="0" />
+      <Item value="bothParentsSelected" priority="0" />
+      <Item value="firstParentSelected" priority="4" />
+      <Item value="secondParentSelected" priority="4" />
+      <Item value="runningFitnessTotal" priority="1" />
+      <Item value="r1" priority="0" />
+      <Item value="IFitnessSelectorContract" priority="1" />
+      <Item value="obj" priority="4" />
+      <Item value="Constants`0" priority="0" />
+      <Item value="startIdx" priority="1" />
+      <Item value="selectionCount" priority="0" />
+      <Item value="Select`0" priority="0" />
+      <Item value="parents1" priority="4" />
+      <Item value="parents2" priority="6" />
+      <Item value="geneData" priority="5" />
+      <Item value="RowPtrs" priority="13" />
+      <Item value="FixedLengthChromosome" priority="4" />
+      <Item value="FixedLengthChromosomeContract" priority="1" />
+      <Item value="v2" priority="8" />
+      <Item value="v1" priority="13" />
+      <Item value="ans" priority="2" />
+      <Item value="Assert`0" priority="4" />
+      <Item value="A" priority="0" />
+      <Item value="B" priority="0" />
+      <Item value="m_rows" priority="0" />
+      <Item value="m_columns" priority="0" />
+      <Item value="columns" priority="32" />
+      <Item value="Form" priority="0" />
+      <Item value="gaTest2Form`0" priority="0" />
+      <Item value="gaTest2Form" priority="0" />
+      <Item value="gaTest2Solution`0" priority="0" />
+      <Item value="readonly" priority="1" />
+      <Item value="struct" priority="0" />
+      <Item value="IMutator`0" priority="1" />
+      <Item value="Convert`0" priority="5" />
+      <Item value="Character" priority="2" />
+      <Item value="Character`0" priority="15" />
+      <Item value="chromosome" priority="2" />
+      <Item value="string" priority="4" />
+      <Item value="ValueChromosome&lt;Character&gt;" priority="0" />
+      <Item value="TargetString" priority="3" />
+      <Item value="outputTB" priority="1" />
+      <Item value="GaTest2Solution`0" priority="0" />
+      <Item value="MatrixBase" priority="0" />
+      <Item value="Rows" priority="29" />
+      <Item value="Columns" priority="33" />
+      <Item value="ValuesData" priority="8" />
+      <Item value="GetLength`0" priority="10" />
+      <Item value="ColumnStart" priority="0" />
+      <Item value="data" priority="2" />
+      <Item value="ComplexVector`0" priority="1" />
+      <Item value="KeyValuePair" priority="5" />
+      <Item value="kvp" priority="17" />
+      <Item value="rows" priority="34" />
+      <Item value="Array`0" priority="1" />
+      <Item value="count" priority="1" />
+      <Item value="StringBuilder" priority="1" />
+      <Item value="retStr" priority="1" />
+      <Item value="implicit" priority="0" />
+      <Item value="initGenes" priority="2" />
+      <Item value="Environment`0" priority="1" />
+      <Item value="Char`0" priority="1" />
+      <Item value="GaTest2Solution" priority="1" />
+      <Item value="NewGaObject" priority="0" />
+      <Item value="Refresh`0" priority="0" />
+      <Item value="Application`0" priority="0" />
+      <Item value="ArrayList`0" priority="0" />
+      <Item value="ObservableCollection" priority="0" />
+      <Item value="ObservableCollection&lt;int&gt;" priority="0" />
+      <Item value="test" priority="0" />
+      <Item value="GraphEvolForm" priority="0" />
+      <Item value="Graph`0" priority="2" />
+      <Item value="GraphTestSolution`0" priority="2" />
+      <Item value="numChromosomes" priority="1" />
+      <Item value="CreateObject`0" priority="0" />
+      <Item value="_targetGraph" priority="3" />
+      <Item value="SimpleGraph" priority="0" />
+      <Item value="_targetVertices" priority="3" />
+      <Item value="_targetEdges" priority="3" />
+      <Item value="Graph" priority="3" />
+      <Item value="Vertices" priority="9" />
+      <Item value="_nodeLabelCounter" priority="5" />
+      <Item value="GraphVertex" priority="2" />
+      <Item value="_vertices" priority="25" />
+      <Item value="nodeLabel" priority="1" />
+      <Item value="nodeLabels" priority="4" />
+      <Item value="nodeList" priority="0" />
+      <Item value="sourceVertex" priority="2" />
+      <Item value="destinationVertex" priority="3" />
+      <Item value="NotFiniteNumberException`0" priority="0" />
+      <Item value="GraphVertex`0" priority="9" />
+      <Item value="_edges" priority="15" />
+      <Item value="_edgelabelCounter" priority="2" />
+      <Item value="source" priority="7" />
+      <Item value="destination" priority="0" />
+      <Item value="_source" priority="0" />
+      <Item value="_sink" priority="0" />
+      <Item value="sink" priority="4" />
+      <Item value="edge" priority="27" />
+      <Item value="_incomingEdges" priority="3" />
+      <Item value="_outgoingEdges" priority="3" />
+      <Item value="GraphEdge`0" priority="28" />
+      <Item value="e" priority="20" />
+      <Item value="Debug`0" priority="0" />
+      <Item value="HashSet&lt;GraphEdge&gt;" priority="1" />
+      <Item value="EdgelabelCounter" priority="1" />
+      <Item value="TargetVertices" priority="2" />
+      <Item value="TargetGraph" priority="2" />
+      <Item value="TargetEdges" priority="0" />
+      <Item value="internal" priority="2" />
+      <Item value="GraphBase`0" priority="0" />
+      <Item value="GraphChromosome" priority="18" />
+      <Item value="SimpleGraph`0" priority="2" />
+      <Item value="event" priority="3" />
+      <Item value="EventHandler" priority="7" />
+      <Item value="EventArgs`0" priority="1" />
+      <Item value="VertexAddedEventArgs`0" priority="5" />
+      <Item value="VertexID" priority="0" />
+      <Item value="id" priority="0" />
+      <Item value="EdgeAddedEventArgs`0" priority="5" />
+      <Item value="EdgeId" priority="0" />
+      <Item value="Id" priority="0" />
+      <Item value="newVertexId" priority="3" />
+      <Item value="VertexAddedEvent" priority="1" />
+      <Item value="handler" priority="7" />
+      <Item value="Nullable`0" priority="0" />
+      <Item value="EdgeAddedEvent" priority="2" />
+      <Item value="OnVertexAddedEvent`0" priority="2" />
+      <Item value="VertexAddedEventArgs" priority="1" />
+      <Item value="vertexId" priority="10" />
+      <Item value="newEdgeId" priority="5" />
+      <Item value="OnEdgeAddedEvent`0" priority="1" />
+      <Item value="EdgeAddedEventArgs" priority="0" />
+      <Item value="vertex1" priority="3" />
+      <Item value="vertex2" priority="4" />
+      <Item value="EventHandler&lt;EdgeAddedEventArgs&gt;" priority="3" />
+      <Item value="Object`0" priority="0" />
+      <Item value="_AddEdge`0" priority="0" />
+      <Item value="GraphChromosome&lt;SimpleGraphM&gt;" priority="0" />
+      <Item value="SimpleGraphM" priority="0" />
+      <Item value="Linq" priority="3" />
+      <Item value="HashSet" priority="1" />
+      <Item value="ReadOnlyCollection" priority="2" />
+      <Item value="ReadOnlyCollection&lt;KeyValuePair&lt;int,GraphVertex&gt;&gt;" priority="1" />
+      <Item value="IDictionary" priority="4" />
+      <Item value="TKey`0" priority="4" />
+      <Item value="TValue`0" priority="6" />
+      <Item value="ReadOnlyDictionary" priority="12" />
+      <Item value="NotSupportedException" priority="9" />
+      <Item value="_sourceDictionary" priority="17" />
+      <Item value="key" priority="6" />
+      <Item value="out" priority="2" />
+      <Item value="item" priority="0" />
+      <Item value="array" priority="1" />
+      <Item value="arrayIndex" priority="2" />
+      <Item value="Count" priority="1" />
+      <Item value="TryGetValue`0" priority="2" />
+      <Item value="ContainsKey`0" priority="2" />
+      <Item value="success" priority="1" />
+      <Item value="default" priority="1" />
+      <Item value="ReadOnlyDictionary&lt;int,GraphVertex&gt;" priority="0" />
+      <Item value="ReadOnlyDictionary&lt;int,GraphEdge&gt;" priority="0" />
+      <Item value="_geneNetwork" priority="0" />
+      <Item value="solnVertices" priority="2" />
+      <Item value="targetVertices" priority="1" />
+      <Item value="solnEdges" priority="3" />
+      <Item value="targetEdges" priority="1" />
+      <Item value="IEnumerable" priority="2" />
+      <Item value="vertexIntersection" priority="1" />
+      <Item value="edgeIntersection" priority="1" />
+      <Item value="GraphTestSolution" priority="0" />
+      <Item value="SimpleGraphM`0" priority="4" />
+      <Item value="FirstVertex" priority="1" />
+      <Item value="firstVertex" priority="6" />
+      <Item value="SecondVertex" priority="1" />
+      <Item value="secondVertex" priority="7" />
+      <Item value="VertexIdCounter" priority="0" />
+      <Item value="_firstVertex" priority="1" />
+      <Item value="_secondVertex" priority="1" />
+      <Item value="ISet" priority="1" />
+      <Item value="ReadOnlySet" priority="0" />
+      <Item value="_sourceSet" priority="4" />
+      <Item value="set" priority="0" />
+      <Item value="other" priority="2" />
+      <Item value="SortedSet" priority="12" />
+      <Item value="SortedSet&lt;int&gt;" priority="8" />
+      <Item value="MyComputer" priority="0" />
+      <Item value="TGraph`0" priority="2" />
+      <Item value="ChromosomalGraph" priority="22" />
+      <Item value="extraGraph" priority="6" />
+      <Item value="SortedList" priority="2" />
+      <Item value="SortedList&lt;int,GraphEdge&gt;" priority="5" />
+      <Item value="vertexList1" priority="7" />
+      <Item value="vertexList2" priority="6" />
+      <Item value="edgeList1" priority="13" />
+      <Item value="edgeList2" priority="4" />
+      <Item value="maxVertexNumber" priority="0" />
+      <Item value="Dictionary" priority="2" />
+      <Item value="Dictionary&lt;int,GraphEdge&gt;" priority="3" />
+      <Item value="KeyedCollection" priority="0" />
+      <Item value="edgeId" priority="8" />
+      <Item value="EdgeIdCounter" priority="1" />
+      <Item value="TGraph" priority="0" />
+      <Item value="newGraph" priority="4" />
+      <Item value="allVertices" priority="0" />
+      <Item value="allEdges" priority="0" />
+      <Item value="vertexCrossoverPt" priority="2" />
+      <Item value="newVertices" priority="0" />
+      <Item value="v" priority="5" />
+      <Item value="lastVertexLabel" priority="0" />
+      <Item value="VertexAdditionRate" priority="2" />
+      <Item value="VertexDeletionRate" priority="5" />
+      <Item value="EdgeAdditionRate" priority="2" />
+      <Item value="EdgeDeletionRate" priority="3" />
+      <Item value="vertices" priority="14" />
+      <Item value="verticesToAdd" priority="3" />
+      <Item value="edges" priority="4" />
+      <Item value="edgeToAdd" priority="0" />
+      <Item value="Edges" priority="0" />
+      <Item value="AddEdges`0" priority="0" />
+      <Item value="AddEdge`0" priority="1" />
+      <Item value="edgesToRemove" priority="2" />
+      <Item value="Pure" priority="2" />
+      <Item value="ContainsEdge`0" priority="1" />
+      <Item value="ContainsVertex`0" priority="1" />
+      <Item value="verticesToRemove" priority="1" />
+      <Item value="IComparable" priority="0" />
+      <Item value="IEquatable" priority="0" />
+      <Item value="VertexChangeEventArgs`0" priority="2" />
+      <Item value="EdgeChangeEventArgs`0" priority="2" />
+      <Item value="VertexRemovedEvent" priority="0" />
+      <Item value="EdgeRemovedEvent" priority="0" />
+      <Item value="OnEdgeRemovedEvent`0" priority="1" />
+      <Item value="EdgeChangeEventArgs" priority="1" />
+      <Item value="OnVertexRemoveEvent`0" priority="0" />
+      <Item value="VertexChangeEventArgs" priority="1" />
+      <Item value="MethodInvoker`0" priority="0" />
+      <Item value="MethodInvoker" priority="0" />
+      <Item value="startEvolutionDelegate" priority="0" />
+      <Item value="InvokeRequired" priority="1" />
+      <Item value="Invoke`0" priority="1" />
+      <Item value="_evolEngine_NewGenerationCreated`0" priority="2" />
+      <Item value="Threading" priority="1" />
+      <Item value="Thread`0" priority="1" />
+      <Item value="_evolutionThread" priority="3" />
+      <Item value="Thread" priority="1" />
+      <Item value="ParameterizedThreadStart" priority="0" />
+      <Item value="StartEvolution`0" priority="0" />
+      <Item value="EventHandler`0" priority="1" />
+      <Item value="numGenerations" priority="1" />
+      <Item value="mathPictureBox1" priority="4" />
+      <Item value="Wolfram.NETLink" priority="0" />
+      <Item value="ml" priority="0" />
+      <Item value="Text" priority="0" />
+      <Item value="StringBuilder`0" priority="0" />
+      <Item value="str" priority="11" />
+      <Item value="doubleBufferedPanel1" priority="0" />
+      <Item value="Wolfram" priority="0" />
+      <Item value="NETLink" priority="0" />
+      <Item value="UI" priority="0" />
+      <Item value="NormalRandomGenerator`0" priority="0" />
+      <Item value="random" priority="4" />
+      <Item value="edgesToAdd" priority="0" />
+      <Item value="_vertexPool" priority="6" />
+      <Item value="vertexPool" priority="1" />
+      <Item value="RemoveRandomEdges`0" priority="0" />
+      <Item value="edgieId" priority="1" />
+      <Item value="TryAddEdge`0" priority="0" />
+      <Item value="_immortalVertices" priority="1" />
+      <Item value="FormatException`0" priority="0" />
+      <Item value="keyValuePair" priority="0" />
+      <Item value="TChromosome`0" priority="10" />
+      <Item value="TChrom`0" priority="2" />
+      <Item value="MessageBox`0" priority="0" />
+      <Item value="_2dFunctionEvolutionForm`0" priority="0" />
+      <Item value="ContractInvariantMethodAttribute`0" priority="0" />
+      <Item value="_random" priority="0" />
+      <Item value="TVectorType`0" priority="4" />
+      <Item value="TVectorType" priority="1" />
+      <Item value="TValueType`0" priority="28" />
+      <Item value="TValueType" priority="2" />
+      <Item value="row" priority="2" />
+      <Item value="column" priority="1" />
+      <Item value="startRow" priority="0" />
+      <Item value="startColumn" priority="0" />
+      <Item value="_rows" priority="18" />
+      <Item value="_columns" priority="22" />
+      <Item value="dimension" priority="12" />
+      <Item value="values" priority="15" />
+      <Item value="SparseVector`0" priority="0" />
+      <Item value="retVec" priority="15" />
+      <Item value="List&lt;TValueType&gt;" priority="1" />
+      <Item value="firstRowIdx" priority="2" />
+      <Item value="lastRowIdx" priority="1" />
+      <Item value="Values" priority="5" />
+      <Item value="ColIndices" priority="7" />
+      <Item value="VectorType`0" priority="4" />
+      <Item value="type" priority="0" />
+      <Item value="ColumnVector" priority="6" />
+      <Item value="Vector`0" priority="0" />
+      <Item value="SparseVector" priority="32" />
+      <Item value="DenseMatrixBase" priority="0" />
+      <Item value="sourceData" priority="0" />
+      <Item value="orientation" priority="4" />
+      <Item value="RowVector" priority="9" />
+      <Item value="TVector`0" priority="0" />
+      <Item value="CreateVector`0" priority="4" />
+      <Item value="TMatrixType`0" priority="1" />
+      <Item value="CreateMatrix`0" priority="4" />
+      <Item value="ital" priority="0" />
+      <Item value="TMatrixType" priority="2" />
+      <Item value="ComplexSparseVector" priority="2" />
+      <Item value="ComplexSparseMatrix" priority="0" />
+      <Item value="Vector&lt;TValueType&gt;" priority="2" />
+      <Item value="Matrix&lt;TValueType&gt;" priority="0" />
+      <Item value="SparseVector&lt;TValueType&gt;" priority="1" />
+      <Item value="SparseMatrix&lt;TValueType&gt;" priority="0" />
+      <Item value="MatrixBaseContract" priority="0" />
+      <Item value="ComplexMatrix`0" priority="0" />
+      <Item value="m" priority="4" />
+      <Item value="retMatrix" priority="0" />
+      <Item value="SparseMatrix" priority="0" />
+      <Item value="valueIdx" priority="4" />
+      <Item value="retVector" priority="3" />
+      <Item value="rowPtrCounter" priority="1" />
+      <Item value="continue" priority="0" />
+      <Item value="genes" priority="0" />
+      <Item value="assembly" priority="0" />
+      <Item value="ContractVerification" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.Vector">
+      <Item value="Length" priority="5" />
+      <Item value="Type" priority="0" />
+      <Item value="_mat" priority="0" />
+      <Item value="Orientation" priority="8" />
+      <Item value="Rows" priority="21" />
+      <Item value="Columns" priority="23" />
+      <Item value="_rows" priority="1" />
+      <Item value="_columns" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MathLib.Matrices.VectorType">
+      <Item value="RowVector" priority="0" />
+      <Item value="ColumnVector" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.Matrix">
+      <Item value="_Rows" priority="0" />
+      <Item value="Rows" priority="1" />
+      <Item value="Columns" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Globalization.CultureInfo">
+      <Item value="CurrentCulture" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.ComplexMatrix">
+      <Item value="_Values" priority="1" />
+      <Item value="ValuesData" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Complex">
+      <Item value="Re" priority="2" />
+      <Item value="Norm" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Double">
+      <Item value="MaxValue" priority="1" />
+      <Item value="PositiveInfinity" priority="0" />
+      <Item value="MinValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.ComplexVector">
+      <Item value="Norm" priority="1" />
+      <Item value="Orientation" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Random">
+      <Item value="NextDouble" priority="0" />
+      <Item value="NextDouble`0" priority="5" />
+      <Item value="Next`0" priority="4" />
+      <Item value="NextBytes`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Select`2" priority="2" />
+      <Item value="Add`0" priority="17" />
+      <Item value="Count" priority="41" />
+      <Item value="Sum`1" priority="1" />
+      <Item value="First`1" priority="0" />
+      <Item value="Reverse`0" priority="1" />
+      <Item value="Find`0" priority="0" />
+      <Item value="Last`1" priority="0" />
+      <Item value="LastIndexOf`0" priority="0" />
+      <Item value="GetRange`0" priority="0" />
+      <Item value="Sort`0" priority="4" />
+      <Item value="Max`2" priority="1" />
+      <Item value="MaxIndex`1" priority="0" />
+      <Item value="Clear`0" priority="2" />
+      <Item value="Union`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:T">
+      <Item value="Fitness`0" priority="0" />
+      <Item value="DeepClone`0" priority="8" />
+      <Item value="RecombineWith`0" priority="1" />
+      <Item value="_genome" priority="6" />
+      <Item value="Genome" priority="1" />
+      <Item value="Mutate`0" priority="0" />
+      <Item value="InitialiseObject`0" priority="0" />
+      <Item value="IsCompatibleWith`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ToList`1" priority="3" />
+      <Item value="ToDictionary`3" priority="0" />
+      <Item value="Distinct`1" priority="0" />
+      <Item value="ToArray`1" priority="0" />
+      <Item value="Count`1" priority="5" />
+      <Item value="Except`1" priority="1" />
+      <Item value="SelectMany`3" priority="1" />
+      <Item value="Select`2" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.NumericUpDown">
+      <Item value="Validate`0" priority="0" />
+      <Item value="Value" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.CheckBox">
+      <Item value="Checked" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Evolution.EvolutionEngine`1">
+      <Item value="BestSolution" priority="4" />
+      <Item value="Evolve`0" priority="2" />
+      <Item value="ElitismSelection" priority="0" />
+      <Item value="NewGenerationCreated" priority="0" />
+      <Item value="CurrentGeneration" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Double">
+      <Item value="ToString`0" priority="2" />
+      <Item value="Item1" priority="0" />
+      <Item value="CompareTo`0" priority="0" />
+      <Item value="IsEqualTo`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.GeneralTests.FunctionToOptimize">
+      <Item value="_x" priority="0" />
+      <Item value="_y" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Debug">
+      <Item value="WriteLine`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="Ticks" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Util.StaticRandom">
+      <Item value="NextDouble`0" priority="21" />
+      <Item value="Next`0" priority="8" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Evolution.GAObject">
+      <Item value="_genome" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Contracts.Contract">
+      <Item value="Requires`1" priority="79" />
+      <Item value="Invariant`0" priority="45" />
+      <Item value="ForAll`1" priority="19" />
+      <Item value="Ensures`0" priority="41" />
+      <Item value="Result`1" priority="35" />
+      <Item value="Assert`0" priority="4" />
+      <Item value="Assume`0" priority="19" />
+      <Item value="ValueAtReturn`1" priority="1" />
+      <Item value="OldValue`1" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Form">
+      <Item value="ShowDialog`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Statistics.INumberGenerator">
+      <Item value="Number" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Evolution.IChromosome">
+      <Item value="GetType`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Util.ValueTypeCloneable`1">
+      <Item value="value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Evolution.RealChromosome">
+      <Item value="Length" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="AppendText`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.GeneralTests.GaTestSolution">
+      <Item value="Fitness`0" priority="0" />
+      <Item value="Genome" priority="0" />
+      <Item value="_chromosome" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Tuple`2">
+      <Item value="Item2" priority="23" />
+      <Item value="Item1" priority="15" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MathLib.Evolution.GeneticAlgorithm">
+      <Item value="MutationRate" priority="2" />
+      <Item value="CrossoverType" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MathLib.Evolution.CrossoverMethod">
+      <Item value="SinglePoint" priority="5" />
+      <Item value="TwoPoint" priority="2" />
+      <Item value="Uniform" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TChromosomeType">
+      <Item value="_genes" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Math">
+      <Item value="Exp`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Evolution.SelectionMethod">
+      <Item value="RouletteSelection" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ObjectModel.Collection`1">
+      <Item value="Add`0" priority="2" />
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Evolution.IFitnessSelector`1">
+      <Item value="SelectParents`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="First`1" priority="1" />
+      <Item value="Last`1" priority="2" />
+      <Item value="Count" priority="5" />
+      <Item value="ToDictionary`3" priority="0" />
+      <Item value="Select`2" priority="1" />
+      <Item value="Min`2" priority="1" />
+      <Item value="Sum`1" priority="0" />
+      <Item value="GetType`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.SortedList`2">
+      <Item value="Add`0" priority="4" />
+      <Item value="ContainsKey`0" priority="6" />
+      <Item value="Union`1" priority="2" />
+      <Item value="Last`1" priority="3" />
+      <Item value="Keys" priority="7" />
+      <Item value="Count" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Tasks.Task`1">
+      <Item value="Result" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.ICollection`1">
+      <Item value="Count" priority="3" />
+      <Item value="First`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MathLib.Constants">
+      <Item value="Epsilon" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
+      <Item value="AreEqual`0" priority="0" />
+      <Item value="IsTrue`0" priority="0" />
+      <Item value="Inconclusive`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MathLib.Matrices.Vector">
+      <Item value="DotProduct`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToChar`0" priority="0" />
+      <Item value="ToInt32`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Length" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.GeneralTests.GaTest2Solution">
+      <Item value="ToString`0" priority="0" />
+      <Item value="Fitness`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.Vector`1">
+      <Item value="Columns" priority="8" />
+      <Item value="Rows" priority="2" />
+      <Item value="_rows" priority="1" />
+      <Item value="_columns" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.KeyValuePair`2">
+      <Item value="Value" priority="13" />
+      <Item value="Key" priority="15" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.DenseMatrixBase`3">
+      <Item value="Rows" priority="3" />
+      <Item value="Columns" priority="2" />
+      <Item value="ValuesData" priority="0" />
+      <Item value="CreateMatrix`0" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Array">
+      <Item value="CreateInstance`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Char">
+      <Item value="Equals`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Evolution.ValueChromosome`1">
+      <Item value="Length" priority="1" />
+      <Item value="Genes" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.StringBuilder">
+      <Item value="Append`0" priority="5" />
+      <Item value="ToString`0" priority="1" />
+      <Item value="AppendFormat`0" priority="0" />
+      <Item value="Remove`0" priority="2" />
+      <Item value="Length" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.GeneralTests.Character">
+      <Item value="_c" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="NewLine" priority="0" />
+      <Item value="GetFolderPath`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
+      <Item value="DoEvents`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ObjectModel.ObservableCollection`1">
+      <Item value="Insert`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="CompareTo`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.HashSet`1">
+      <Item value="Add`0" priority="2" />
+      <Item value="Contains`0" priority="6" />
+      <Item value="ToList`1" priority="0" />
+      <Item value="Count" priority="0" />
+      <Item value="Remove`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Graph.SimpleGraph">
+      <Item value="AddVertex`0" priority="0" />
+      <Item value="GetVertexList`0" priority="0" />
+      <Item value="GetEdgeList`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Graph.GraphVertex">
+      <Item value="AddIncomingEdge`0" priority="2" />
+      <Item value="AddOutgoingEdge`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Graph.VertexAddedEventArgs">
+      <Item value="VertexId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Graph.EdgeAddedEventArgs">
+      <Item value="EdgeId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IDictionary`2">
+      <Item value="ContainsKey`0" priority="2" />
+      <Item value="Keys" priority="1" />
+      <Item value="TryGetValue`0" priority="0" />
+      <Item value="Values" priority="0" />
+      <Item value="Contains`0" priority="0" />
+      <Item value="CopyTo`0" priority="0" />
+      <Item value="Count" priority="2" />
+      <Item value="GetEnumerator`0" priority="1" />
+      <Item value="Select`2" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Util.ReadOnlyDictionary`2">
+      <Item value="Count" priority="0" />
+      <Item value="Intersect`1" priority="1" />
+      <Item value="Union`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Evolution.GraphChromosome`1">
+      <Item value="ChromosomalGraph" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.GeneralTests.SimpleGraphM">
+      <Item value="GetVertexList`0" priority="0" />
+      <Item value="GetEdgeList`0" priority="0" />
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.SortedSet`1">
+      <Item value="Contains`0" priority="2" />
+      <Item value="Union`1" priority="2" />
+      <Item value="Last`1" priority="3" />
+      <Item value="Count" priority="2" />
+      <Item value="Add`0" priority="0" />
+      <Item value="Take`1" priority="0" />
+      <Item value="ElementAt`1" priority="0" />
+      <Item value="TakeWhile`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Graph.GraphEdge">
+      <Item value="FirstVertex" priority="8" />
+      <Item value="SecondVertex" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.ISet`1">
+      <Item value="GetEnumerator`0" priority="1" />
+      <Item value="UnionWith`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TGraph">
+      <Item value="GetVertexList`0" priority="5" />
+      <Item value="GetEdgeList`0" priority="5" />
+      <Item value="AddVertex`0" priority="4" />
+      <Item value="TryAddEdge`0" priority="3" />
+      <Item value="Mutate`0" priority="0" />
+      <Item value="VertexCount" priority="2" />
+      <Item value="EdgeCount" priority="2" />
+      <Item value="RemoveEdge`0" priority="1" />
+      <Item value="TryAddVertex`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="MaxValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
+      <Item value="Count" priority="1" />
+      <Item value="ContainsKey`0" priority="1" />
+      <Item value="Where`1" priority="0" />
+      <Item value="Keys" priority="0" />
+      <Item value="Remove`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.MethodInvoker">
+      <Item value="BeginInvoke`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="Start`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Wolfram.NETLink.UI.MathPictureBox">
+      <Item value="ErrorImage" priority="0" />
+      <Item value="MathCommand" priority="1" />
+      <Item value="Link" priority="0" />
+      <Item value="PictureType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.GeneralTests.GraphEvolForm">
+      <Item value="Refresh`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Statistics.NormalRandomGenerator">
+      <Item value="Number" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MathLib.Evolution.GraphChromosome`1">
+      <Item value="EdgeAdditionRate" priority="0" />
+      <Item value="EdgeDeletionRate" priority="0" />
+      <Item value="VertexAdditionRate" priority="0" />
+      <Item value="VertexDeletionRate" priority="0" />
+      <Item value="VertexPool" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Evolution.IChromosomeContract`1">
+      <Item value="IsCompatibleWith`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TObject">
+      <Item value="_chromosome" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TChromosome">
+      <Item value="Crossover`0" priority="0" />
+      <Item value="Mutate`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TVectorType">
+      <Item value="Rows" priority="0" />
+      <Item value="Columns" priority="0" />
+      <Item value="RowPtrs" priority="6" />
+      <Item value="Values" priority="3" />
+      <Item value="ColIndices" priority="0" />
+      <Item value="ValuesData" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.Matrix`1">
+      <Item value="Columns" priority="2" />
+      <Item value="Rows" priority="1" />
+      <Item value="ValuesData" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <Bookmarks>
+    <Bookmark owner="NumberedBookmarkManager" id="Bookmark9" file-id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:SparseMatrix.cs" coords="(Doc Ln 32 Col 33)" />
+  </Bookmarks>
+</Configuration>

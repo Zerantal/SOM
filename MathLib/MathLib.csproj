@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{06119B37-8AB7-47AC-A943-672FEEEEC597}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MathLib</RootNamespace>
+    <AssemblyName>MathLib</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>myKeyPair.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\MathLib.XML</DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <NoWarn>1591</NoWarn>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <CodeAnalysisRuleSet>AllRulesMinusCA1062.ruleset</CodeAnalysisRuleSet>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRunCodeAnalysis>True</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>True</CodeContractsArithmeticObligations>
+    <CodeContractsRedundantAssumptions>True</CodeContractsRedundantAssumptions>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsPlatformPath />
+    <CodeContractsExtraAnalysisOptions>-sortwarns=false -show progress</CodeContractsExtraAnalysisOptions>
+    <CodeContractsBaseLineFile>..\..\baseline.xml</CodeContractsBaseLineFile>
+    <CodeContractsRuntimeCheckingLevel>ReleaseRequires</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>Build</CodeContractsReferenceAssembly>
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsContainerAnalysis>True</CodeContractsContainerAnalysis>
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsEnumObligations>True</CodeContractsEnumObligations>
+    <CodeContractsAnalysisWarningLevel>2</CodeContractsAnalysisWarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>False</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>False</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>False</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsPlatformPath />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsRuntimeCheckingLevel>None</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>Build</CodeContractsReferenceAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="mscorlib.Behaviors, Version=0.94.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib.Moles, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0ae41878053f6703, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Evolution\FixedLengthChromosomeContract.cs" />
+    <Compile Include="Evolution\GaObjectContract.cs" />
+    <Compile Include="Evolution\GraphChromosome.cs" />
+    <Compile Include="Evolution\IChromosomeContract.cs" />
+    <Compile Include="Evolution\IFitnessSelector.cs" />
+    <Compile Include="Evolution\IFitnessSelectorContract.cs" />
+    <Compile Include="Evolution\IMutator.cs" />
+    <Compile Include="Evolution\FixedLengthChromosome.cs" />
+    <Compile Include="Evolution\GeneticAlgorithm.cs" />
+    <Compile Include="Evolution\IChromosome.cs" />
+    <Compile Include="Evolution\ESObject.cs" />
+    <Compile Include="Evolution\EvolutionEngine.cs" />
+    <Compile Include="Evolution\GaObject.cs" />
+    <Compile Include="Evolution\IEvolvableObject.cs" />
+    <Compile Include="Evolution\IEvolvableObjectContract.cs" />
+    <Compile Include="Evolution\RealChromosome.cs" />
+    <Compile Include="Evolution\RouletteSelector.cs" />
+    <Compile Include="Evolution\ValueChromosome.cs" />
+    <Compile Include="Graph\EdgeChangeEventArgs.cs" />
+    <Compile Include="Graph\GraphEdge.cs" />
+    <Compile Include="Graph\SimpleGraph.cs" />
+    <Compile Include="Graph\VertexChangeEventArgs.cs" />
+    <Compile Include="Matrices\ComplexSparseVector.cs" />
+    <Compile Include="Matrices\ComplexMatrix.cs" />
+    <Compile Include="Matrices\ComplexSparseMatrix.cs" />
+    <Compile Include="Matrices\ComplexVector.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Matrices\DenseMatrixBase.cs" />
+    <Compile Include="Matrices\GenericMatrix.cs" />
+    <Compile Include="General\MathExtensions.cs" />
+    <Compile Include="Matrices\GenericSparseVector.cs" />
+    <Compile Include="Matrices\GenericVector.cs" />
+    <Compile Include="Graph\FortunesAlgorithm\Voronoi.cs" />
+    <Compile Include="Graph\Graph.cs" />
+    <Compile Include="Matrices\INumericMatrix.cs" />
+    <Compile Include="Matrices\INumericVector.cs" />
+    <Compile Include="Matrices\IVector.cs" />
+    <Compile Include="Matrices\IVectorContract.cs" />
+    <Compile Include="Matrices\MatrixBase.cs" />
+    <Compile Include="Matrices\MatrixBaseContract.cs" />
+    <Compile Include="Matrices\Matrix.cs" />
+    <Compile Include="Matrices\MatrixExtensions.cs" />
+    <Compile Include="Matrices\SizeMismatchException.cs" />
+    <Compile Include="Matrices\SparseMatrixBase.cs" />
+    <Compile Include="SignalAnalysis\Fourier.cs" />
+    <Compile Include="General\BasicMath.cs" />
+    <Compile Include="GenericOperators.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="MathLibException.cs" />
+    <Compile Include="Matrices\VectorTypeEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Matrices\GenericSparseMatrix.cs" />
+    <Compile Include="Matrices\SparseMatrix.cs" />
+    <Compile Include="Matrices\SparseVector.cs" />
+    <Compile Include="Statistics\ConstantGenerator.cs" />
+    <Compile Include="Statistics\Histogram.cs" />
+    <Compile Include="Statistics\INumberGenerator.cs" />
+    <Compile Include="Statistics\NormalRandomGenerator.cs" />
+    <Compile Include="Statistics\UniformRandomGenerator.cs" />
+    <Compile Include="Matrices\Vector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AllRulesMinusCA1062.ruleset" />
+    <None Include="Evolution\Evolutionary Algorithms.cd" />
+    <None Include="MathLibKey.snk" />
+    <Moles Include="mscorlib.moles" />
+    <None Include="Matrices\MatrixArch.cd" />
+    <None Include="myKeyPair.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{1E22CAC4-8E90-4DD7-A754-6D1EF0845230}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="CustomDictionary.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

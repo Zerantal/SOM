@@ -1,0 +1,956 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Drawing.Drawing2D;
+using System.Text;
+using System.Windows.Forms;
+using System.Reflection;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+
+using SomLibrary;
+using Util;
+using System.Diagnostics;
+
+namespace SOMSimulator
+{
+    internal partial class MainForm : Form
+    {
+        [Serializable]
+        struct DisplayPanelDetails
+        {
+            [NonSerialized]
+            public IVisualiser Visualiser;
+            [NonSerialized]
+            public IVisualiser AnimationVisualiser;
+            [NonSerialized]
+            public GifAnimator GifAnimation;
+            [NonSerialized]
+            public WinDrawer PanelDrawer;
+            [NonSerialized]
+            public WinDrawer AnimationDrawer;
+            public bool GeneratingAnimation;
+            public string AnimationFilename;
+            public string VisualiserName;  // used for the deserializing of this data structure
+            [NonSerialized]
+            public PictureBox pb; // picture box associated with panel
+        }
+
+        #region Fields (16)
+
+        private const int animationWidth = 800;
+        private const int animationHeight = 600;
+        private ISOM m_AlgInstance;
+        private List<SOMPluginControl> m_AlgorithmParameters;
+        private List<SOMPluginControl> m_NeuronMapParameters;
+        //private List<ParameterDetails> m_VisualiserParameters;
+        private PluginRegistry<ISOM> m_Algorithms;
+        private PluginRegistry<IVisualiser> m_Visualisers;
+        private PluginRegistry<NeuronMap> m_NeuronMaps;
+        private FileInputLayer m_DataSource;
+        private NeuronMap m_CurrentMap;
+        private DefaultVisualiser m_DefaultVis;
+        private ExecutionManager m_ExecManager;
+        private DateTime m_StartTime;
+        private TextBoxListener m_TraceOutput;
+        private DisplayPanelDetails[] m_DisplayPanel;
+        private int m_SelectedPanel;
+        private bool m_CreateAlgInstance; // used to suspend alg creation when loading program state
+        private bool m_CreateMapInstance;
+
+        #endregion Fields
+
+        #region Constructors (1)
+
+        public MainForm()
+        {
+            InitializeComponent();
+
+            // setup tracing and debugging
+            m_TraceOutput = new TextBoxListener(infoTB);
+            Trace.Listeners.Add(m_TraceOutput);
+            // debugging output
+            Debug.Listeners.Add(new System.Diagnostics.TextWriterTraceListener(new FileStream("debugOutput.txt", FileMode.Create)));
+
+            m_Algorithms = new PluginRegistry<ISOM>();
+            m_Visualisers = new PluginRegistry<IVisualiser>();
+            m_NeuronMaps = new PluginRegistry<NeuronMap>();
+            m_DisplayPanel = new DisplayPanelDetails[4];
+            for (int i = 0; i < m_DisplayPanel.Length; i++)
+            {
+                m_DisplayPanel[i].pb = displayArea.GetPanelContents(i);
+                m_DisplayPanel[i].GifAnimation = new GifAnimator();
+                m_DisplayPanel[i].AnimationDrawer = new WinDrawer(animationWidth, animationHeight);
+                m_DisplayPanel[i].PanelDrawer = new WinDrawer(m_DisplayPanel[i].pb.Size);
+            }
+            m_CreateAlgInstance = true;
+            m_CreateMapInstance = true;
+
+            // place default visualiser on first display panel            
+            m_DefaultVis = new DefaultVisualiser();
+            m_DisplayPanel[0].Visualiser = m_DefaultVis;
+            m_DisplayPanel[0].Visualiser.Drawer = m_DisplayPanel[0].PanelDrawer;
+
+            // setup execution manager
+            m_ExecManager = new ExecutionManager();
+            m_ExecManager.RunWorkerCompleted += new RunWorkerCompletedEventHandler(
+                OnAlgorithmStopped);
+            m_ExecManager.ProgressChanged += new ProgressChangedEventHandler
+                (OnUpdateGraph);
+
+
+            ScanAssemblies();
+
+            SetFormNonExecutingState();
+        }
+
+        #endregion Constructors
+
+        #region Methods (27)
+
+
+        // Private Methods (27) 
+
+        private void UpdateSOMControls()
+        {
+            algorithmLB.Items.Clear();
+            neuronMapTypeCB.Items.Clear();
+            visualiserLB.Items.Clear();
+
+            // fill neuron map combobox
+            foreach (string name in m_NeuronMaps.NameEnum)
+                neuronMapTypeCB.Items.Add(name);
+            if (neuronMapTypeCB.Items.Count > 0)
+                neuronMapTypeCB.SelectedIndex = 0;
+
+            // fill algorithm listbox
+            foreach (string name in m_Algorithms.NameEnum)
+                algorithmLB.Items.Add(name);
+
+            if (algorithmLB.Items.Count > 0)
+            {
+                if (trainToolStripMenuItem.Enabled == false)
+                {
+                    trainToolStripMenuItem.Enabled = true;
+                    trainBtn.Enabled = true;
+                }
+                algorithmLB.SelectedIndex = 0;  // will update algorithm properties
+            }
+
+            foreach (string name in m_Visualisers.NameEnum)
+                visualiserLB.Items.Add(name);
+
+            if (visualiserLB.Items.Count > 0)
+                visualiserLB.SelectedIndex = 0;
+        }
+
+        private TableLayoutPanel PropertyTable(List<SOMPluginControl> parameters, object Instance)
+        {
+            Label l;
+            Control inputCtrl;
+            TableLayoutPanel propTable = new TableLayoutPanel();
+
+            propTable.ColumnCount = 2;
+            propTable.Dock = DockStyle.Fill;
+            propTable.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            propTable.AutoScroll = true;
+
+            if (parameters.Count != 0)
+            {
+                foreach (SOMPluginControl p in parameters)
+                {
+                    inputCtrl = p.ParameterControl;
+                    if (inputCtrl != null)
+                    {
+                        l = new Label();
+                        l.Text = p.Name;
+                        l.Dock = DockStyle.Fill;
+                        l.TextAlign = ContentAlignment.MiddleLeft;
+
+                        propTable.Controls.Add(l);
+                        propTable.Controls.Add(inputCtrl);
+                    }
+                }
+            }
+            propTable.Controls.Add(new Label()); // dummy control to add extra row                 
+            return propTable;
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            QuitApplication();
+        }
+
+        private void OnAlgorithmLBSelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (algorithmLB.SelectedIndex >= 0)
+            {
+                if (m_CreateAlgInstance)
+                {
+                    m_AlgInstance = m_Algorithms.CreatePluginInstance((string)algorithmLB.SelectedItem);
+                    if (m_CurrentMap != null)
+                        m_AlgInstance.Map = m_CurrentMap;
+                    if (m_DataSource != null)
+                        m_AlgInstance.InputReader = m_DataSource;
+                }
+
+                m_AlgorithmParameters = m_Algorithms.CompilePropertyControls((string)algorithmLB.SelectedItem, m_AlgInstance);
+                algPropPanel.Controls.Clear();
+                algPropPanel.Controls.Add(PropertyTable(m_AlgorithmParameters, m_AlgInstance));
+            }
+        }
+
+        private void OnAlgorithmStopped(object sender, RunWorkerCompletedEventArgs e)
+        {
+            TimeSpan timer = DateTime.Now - m_StartTime;
+
+            // check for exception occuring in algorithm execution
+            if (e.Error != null)
+            {
+                Debug.WriteLine("Exception occurred when training algorithm:\n" +
+                    e.Error.Message);
+            }
+
+            while (m_ExecManager.IsBusy) ;
+
+            SetFormNonExecutingState();
+            // synchronize algorithm parameters with their input control.
+            foreach (SOMPluginControl d in m_AlgorithmParameters)
+                d.UpdateParameter();
+
+            Trace.WriteLine("Training finished in " + timer.Minutes + " Minutes, " + timer.Seconds +
+                " Seconds.");
+
+            for (int i = 0; i < m_DisplayPanel.Length; i++)
+            {
+                if (m_DisplayPanel[i].GeneratingAnimation)
+                { // Save animation                       
+                    try
+                    {
+                        m_DisplayPanel[i].GifAnimation.SaveFile(Path.GetFileName(
+                            m_DisplayPanel[i].AnimationFilename));
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error writing animation file: " +
+                            Path.GetFileName(m_DisplayPanel[i].AnimationFilename),
+                            "Error", MessageBoxButtons.OK);
+                    }
+                }
+            }
+
+            foreach (DisplayPanelDetails d in m_DisplayPanel)
+                if (d.Visualiser is DefaultVisualiser)
+                    ((DefaultVisualiser)d.Visualiser).Stop();
+        }
+
+        private void OnCancelBtnClick(object sender, EventArgs e)
+        {
+
+            cancelBtn.Enabled = false;
+            m_ExecManager.CancelAsync();
+
+        }
+
+        // visualise and draw maps
+        private void VisualiseMaps()
+        {
+            // Re-visualise map at new resolution
+            if (m_AlgInstance.Map != null && !m_ExecManager.IsBusy)
+                foreach (DisplayPanelDetails d in m_DisplayPanel)
+                {
+                    if (d.Visualiser != null)
+                    {
+                        if (d.Visualiser.CanVisualiseMap(m_AlgInstance))
+                        {
+                            d.Visualiser.VisualiseMap(m_AlgInstance);
+                            d.pb.Image = (Image)d.PanelDrawer.GetImage().Clone();
+                        }
+                    }
+                    else
+                        d.pb.Image = new Bitmap(d.PanelDrawer.Width, d.PanelDrawer.Height);
+                        
+                }
+
+            displayArea.Refresh();
+        }
+
+        [TODO("Can this method be simplified a bit?")]
+        private void OnDisplayPanelSizeChanged(object sender, EventArgs e)
+        {
+            Control panel = (Control)sender;
+            int newWidth = panel.ClientSize.Width - panel.Margin.Left - panel.Margin.Right;
+            int newHeight = panel.ClientSize.Height - panel.Margin.Top - panel.Margin.Bottom;
+            int panelWidth, panelHeight;
+
+            // ensure that newWidth and newHeight are always 
+            if (newWidth < 1) newWidth = 1;
+            if (newHeight < 1) newHeight = 1;
+
+            if (newWidth < newHeight)
+                displayArea.Size = new Size(newWidth, newWidth);
+            else
+                displayArea.Size = new Size(newHeight, newHeight);
+
+            if (m_ExecManager.IsBusy)
+                lock(m_Visualisers)
+                {
+                    for (int i = 0; i < m_DisplayPanel.Length; i++)
+                    {                                              
+                            panelWidth = displayArea.GetPanelContents(i).Width;
+                            panelHeight = displayArea.GetPanelContents(i).Height;
+                            if (panelWidth > 0 && panelHeight > 0)
+                                m_DisplayPanel[i].PanelDrawer.Size = new Size(
+                                    panelWidth, panelHeight);
+                        
+                    }
+                }
+            else
+            {
+                for (int i = 0; i < m_DisplayPanel.Length; i++)
+                {
+                    panelWidth = displayArea.GetPanelContents(i).Width;
+                    panelHeight = displayArea.GetPanelContents(i).Height;
+                    if (panelWidth > 0 && panelHeight > 0)
+                        m_DisplayPanel[i].PanelDrawer.Size = new Size(
+                            panelWidth, panelHeight);
+                }
+            }
+
+            VisualiseMaps();
+        }
+
+        private void OnQuitToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            QuitApplication();
+            this.Close();
+        }
+
+        private void OnRecordAnimCheckBoxCheckedChanged(object sender, EventArgs e)
+        {
+            m_DisplayPanel[m_SelectedPanel].GeneratingAnimation = recordAnimCheckBox.Checked;
+
+            if (recordAnimCheckBox.Checked == true)
+            {
+                animFilenameTB.Enabled = true;
+                SelectAnimFileBtn.Enabled = true;
+            }
+            else
+            {
+                animFilenameTB.Enabled = false;
+                SelectAnimFileBtn.Enabled = false;
+            }
+        }
+
+        private void OnScanAssemblyToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            OpenFileDialog assOpenDlg = new OpenFileDialog();
+
+            assOpenDlg.Filter = "assemblies (*.exe, *.dll)|*.dll; *.exe|All files (*.*)|*.*";
+            assOpenDlg.RestoreDirectory = true;
+
+            if (assOpenDlg.ShowDialog() == DialogResult.OK)
+            {
+                Trace.WriteLine("Scanning " + Path.GetFileName(assOpenDlg.FileName) + "...");
+                if (!ScanFile(assOpenDlg.FileName))
+                {
+                    Trace.WriteLine("  Invalid assembly file");
+                    MessageBox.Show("File specified is not a .NET assembly", "Error", MessageBoxButtons.OK);
+                }
+                else Trace.WriteLine("  Done.");
+            }
+        }
+
+        private void OnSelectAnimFileBtnClick(object sender, EventArgs e)
+        {
+            SaveFileDialog saveDlg = new SaveFileDialog();
+
+            saveDlg.Filter = "gif file| *.gif";
+            saveDlg.RestoreDirectory = true;
+
+            if (saveDlg.ShowDialog() == DialogResult.OK)
+            {
+                animFilenameTB.Text = saveDlg.FileName;
+            }
+        }
+
+        [TODO("Add option for frame speed")]
+        private void OnUpdateGraph(object sender, ProgressChangedEventArgs e)
+        {
+            foreach (DisplayPanelDetails d in m_DisplayPanel)
+            {
+                if (d.Visualiser != null)
+                {
+                    d.pb.Image = (Image)d.PanelDrawer.GetImage().Clone();
+                    //d.pb.Refresh();
+                }
+
+                // re-render frame for animation
+                if (d.GeneratingAnimation)
+                    d.GifAnimation.AddFrame((Image)d.AnimationDrawer.GetImage().Clone(), 25);
+
+            }
+            m_ExecManager.updateEvent.Set(); // resume worker thread
+        }
+
+        private void OnVisualDisplayPaint(object sender, PaintEventArgs e)
+        {
+            if (m_ExecManager.Visualisers != null && !m_ExecManager.IsBusy)
+            {
+                for (int i = 0; i < m_DisplayPanel.Length; i++)
+                    m_DisplayPanel[i].pb.Image = (Image)m_DisplayPanel[i].PanelDrawer.GetImage().Clone();
+            }
+        }
+
+        private void OpenTrainingFile(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Title = "Enter Training File...";
+            openFile.Filter = "data files (*.dat;*.data;*.csv)|*.dat;*.data;*.csv|All files (*.*)|*.*";
+            openFile.RestoreDirectory = true;
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    m_DataSource = new FileInputLayer(openFile.FileName);
+                    m_AlgInstance.InputReader = m_DataSource;                    
+
+                    if (randomInput.Checked)
+                        m_DataSource.RandomizeInput = true;                    
+                }
+                catch (IOException)
+                {
+                    MessageBox.Show("Can't open file", "Error", MessageBoxButtons.OK);
+                }
+                catch (SOMFileException ex)
+                {
+                    MessageBox.Show("Error parsing file at line: " + ex.Line +
+                        ", attribute: " + ex.Attribute, "Error", MessageBoxButtons.OK);
+                }
+
+            }
+        }
+
+        /// <summary>
+        /// Any application cleanup code to go in here
+        /// </summary>
+        private void QuitApplication()
+        {
+            /*
+            if (m_ExecManager.IsBusy)
+                m_ExecManager.CancelAsync();
+            
+            this.Enabled = false; // prevent any more UI events from occuring
+
+            // this is probably not necessary. What does it matter
+            // if the worker thread is aborted!
+            while (m_ExecManager.IsBusy)
+            {
+                // this is a bit of a hack
+                // Needed to ensure that execManager.RunWorkerCompleted event is marshalled
+                // so that execution thread can terminate
+                Application.DoEvents();
+            }*/
+
+            Debug.Close();
+            Trace.Close();
+        }
+
+        private void ReloadAlgParameters()
+        {
+            foreach (SOMPluginControl p in m_AlgorithmParameters)
+                p.RefreshControlDisplay();
+        }
+
+        private void ScanAssemblies()
+        {
+
+            Trace.WriteLine("Searching for plugins ...");
+            // Read dll assemblies in current directories
+            DirectoryInfo di = new DirectoryInfo(".\\");
+            FileInfo[] assemblies = di.GetFiles("*.dll");
+            foreach (FileInfo fi in assemblies)
+                ScanFile(fi.Name);
+            assemblies = di.GetFiles("*.exe");
+            foreach (FileInfo fi in assemblies)
+                ScanFile(fi.Name);
+        }
+
+        private bool ScanFile(string fn)
+        {
+            // This is a long function but trivial
+            Assembly a;
+            List<Type> algList = new List<Type>();
+            List<Type> visList = new List<Type>();
+
+            try
+            {
+                a = Assembly.LoadFrom(fn);
+            }
+            catch (FileLoadException)
+            {
+                return false;
+            }
+            Type[] tarray = a.GetExportedTypes();
+            object[] pluginAttribute;
+            foreach (Type t in tarray)
+            {
+                pluginAttribute = t.GetCustomAttributes(typeof(SOMPluginDetailAttribute), false);
+
+                if (pluginAttribute.Length == 1)
+                {
+                    // read algorithms
+                    if (null != t.GetInterface(typeof(ISOM).FullName) && !t.IsAbstract)
+                    {
+                        m_Algorithms.Add(t);
+                        Trace.WriteLine( Path.GetFileName(fn) + ":\t" + t.Name + " algorithm found");
+                    }
+                    else // read visualisers
+                        if (null != t.GetInterface(typeof(IVisualiser).FullName) && !t.IsAbstract)
+                        {
+                            m_Visualisers.Add(t);
+                            Trace.WriteLine(Path.GetFileName(fn) + ":\t" + t.Name + " visualiser found");
+                        }
+                        else // read neuron map types
+                            if (t.IsSubclassOf(typeof(NeuronMap)) && !t.IsAbstract)
+                            {
+                                m_NeuronMaps.Add(t);
+                                Trace.WriteLine(Path.GetFileName(fn) + ":\t" + "Type of Neuron Map found: " + t.Name);
+                            }
+                }
+            }
+
+            UpdateSOMControls();
+
+            return true;
+        }
+
+        private void SelectInputSource(object sender, EventArgs e)
+        {
+            if (sender == openFileToolStripMenuItem)
+            {
+                openFileToolStripMenuItem.Checked = true;
+                OpenTrainingFile(sender, e);
+            }
+
+            ReloadAlgParameters();
+        }
+
+        private void SetFormExecutingState()
+        {
+            simulateToolStripMenuItem.Enabled = false;
+            inputSourceToolStripMenuItem.Enabled = false;
+            scanAssemblyToolStripMenuItem.Enabled = false;
+            saveProgramStateToolStripMenuItem.Enabled = false;
+            saveMapMenuItem.Enabled = false;
+            loadProgramStateToolStripMenuItem.Enabled = false;
+            loadMapMenuItem.Enabled = false;
+            writeMapVectorsToolStripMenuItem.Enabled = false;
+            visualiserPropPanel.Enabled = false;
+            algorithmLB.Enabled = false;
+            algPropGB.Enabled = false;
+            neuronMapPropGB.Enabled = false;
+            resetBtn.Enabled = false;
+            trainBtn.Enabled = false;
+            updateIntervalUpDown.Enabled = false;
+            cancelBtn.Enabled = true;
+
+            animationControls.Enabled = false;
+            attachVisBtn.Enabled = false;
+            detachVisualiserBtn.Enabled = false;
+            saveImageBtn.Enabled = false;
+        }
+
+        private void SetFormNonExecutingState()
+        {
+            simulateToolStripMenuItem.Enabled = true;
+            inputSourceToolStripMenuItem.Enabled = true;
+            scanAssemblyToolStripMenuItem.Enabled = true;
+            saveProgramStateToolStripMenuItem.Enabled = true;
+            saveMapMenuItem.Enabled = true;
+            loadProgramStateToolStripMenuItem.Enabled = true;
+            loadMapMenuItem.Enabled = true;
+            writeMapVectorsToolStripMenuItem.Enabled = true;
+            visualiserPropPanel.Enabled = true;
+            algorithmLB.Enabled = true;
+            algPropGB.Enabled = true;
+            neuronMapPropGB.Enabled = true;
+            resetBtn.Enabled = true;
+            trainBtn.Enabled = true;
+            updateIntervalUpDown.Enabled = true;
+            cancelBtn.Enabled = false;
+
+            animationControls.Enabled = true;
+            attachVisBtn.Enabled = true;
+            detachVisualiserBtn.Enabled = true;
+            saveImageBtn.Enabled = true;
+        }
+
+        [TODO("Rethink initialisation mechanism.")]
+        private void TrainToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            if (m_DataSource == null)
+            {
+                MessageBox.Show("Cannot initiate training, no data source loaded!", "Error",
+                    MessageBoxButtons.OK);
+                return;
+            }
+            if (m_CurrentMap == null)
+            {
+                MessageBox.Show("Cannot initiate training, type of neuron map is not specified!", "Error", MessageBoxButtons.OK);
+                return;
+            }
+
+            m_CurrentMap.InputDimension = m_DataSource.InputDimension;
+            Init.Random(m_CurrentMap); // initialise map weightings with random values
+            m_AlgInstance.ProgressInterval = Convert.ToInt32(updateIntervalUpDown.Value);
+            m_ExecManager.Algorithm = m_AlgInstance;
+
+            // Setup default visualiser
+            if (m_DisplayPanel[0].Visualiser is DefaultVisualiser)
+                ((DefaultVisualiser)m_DisplayPanel[0].Visualiser).Start(
+                    m_AlgInstance.ProgressInterval);
+
+            // Specify visualisers
+            m_ExecManager.Visualisers = new List<IVisualiser>();
+            foreach (DisplayPanelDetails d in m_DisplayPanel)
+            {
+                if (d.Visualiser != null)
+                    m_ExecManager.Visualisers.Add(d.Visualiser);
+                if (d.GeneratingAnimation)
+                {
+                    d.GifAnimation.Clear();
+                    m_ExecManager.Visualisers.Add(d.AnimationVisualiser);
+                }
+            }
+
+            m_StartTime = DateTime.Now;
+            m_ExecManager.RunWorkerAsync();
+
+            SetFormExecutingState();
+        }
+
+
+        #endregion Methods
+
+        private void resetBtn_Click(object sender, EventArgs e)
+        {
+            // force a SelectedIndexChanged event
+            int tmp = algorithmLB.SelectedIndex;
+            algorithmLB.SelectedIndex = -1;
+            algorithmLB.SelectedIndex = tmp;
+
+            ReloadAlgParameters();
+        }
+
+
+
+        private void UpdateVisualiserProperties()
+        {
+            if (m_DisplayPanel[m_SelectedPanel].Visualiser is IVisualiser)
+            {
+                animationControls.Enabled = true;
+                visualiserLabel.Text = m_DisplayPanel[m_SelectedPanel].Visualiser.GetType().Name;
+                animFilenameTB.Text = m_DisplayPanel[m_SelectedPanel].AnimationFilename;
+                recordAnimCheckBox.Checked = m_DisplayPanel[m_SelectedPanel].GeneratingAnimation;
+            }
+            else
+            {
+                visualiserLabel.Text = "No visualiser active for selected display area.";
+                animationControls.Enabled = false;
+            }
+
+            if (displayArea.GetPanelContents(m_SelectedPanel).Image != null)
+                saveImageBtn.Enabled = true;
+            else
+                saveImageBtn.Enabled = false;
+        }
+
+        private void displayArea_SelectedPanelChanged(object sender, EventArgs e)
+        {
+            m_SelectedPanel = ((DisplayArea4x4Control)sender).SelectedPanel;
+            if (m_DisplayPanel[m_SelectedPanel].Visualiser == null)
+                detachVisualiserBtn.Enabled = false;
+            else
+                detachVisualiserBtn.Enabled = true;
+            UpdateVisualiserProperties();
+        }
+
+        private void animFilenameTB_TextChanged(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+
+            m_DisplayPanel[m_SelectedPanel].AnimationFilename =
+                tb.Text;
+        }
+
+        [TODO("Extend this so that the visualDisplay can be saved as a vector file (needed for papers)")]
+        private void saveImageBtn_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveImgDlg = new SaveFileDialog();
+
+            saveImgDlg.Filter = "PNG Image|*.png|JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif";
+            saveImgDlg.RestoreDirectory = true;
+            saveImgDlg.Title = "Save Image As ...";
+
+            if (saveImgDlg.ShowDialog() == DialogResult.OK)
+            {
+                // If the file name is not an empty string open it for saving.
+                if (saveImgDlg.FileName != "")
+                {
+
+                    System.IO.FileStream fs;
+                    if ((fs = (System.IO.FileStream)saveImgDlg.OpenFile()) != null)
+                    {
+                        PictureBox pb = displayArea.GetPanelContents(
+                            m_SelectedPanel);
+                        switch (saveImgDlg.FilterIndex)
+                        {
+                            case 1:
+                                pb.Image.Save(fs, ImageFormat.Png);
+                                break;
+
+                            case 2:
+                                pb.Image.Save(fs, ImageFormat.Jpeg);
+                                break;
+
+                            case 3:
+                                pb.Image.Save(fs, ImageFormat.Bmp);
+                                break;
+
+                            case 4:
+                                pb.Image.Save(fs, ImageFormat.Gif);
+                                break;
+                            default:
+                                break;
+                        }
+                        fs.Close();
+                    }
+                }
+            }
+        }
+
+        private void saveProgramStateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!m_AlgInstance.GetType().IsSerializable)
+            {
+                MessageBox.Show("Current algorithm doesn't support saving its" +
+                    " state.", "Error", MessageBoxButtons.OK);
+                return;
+            }
+
+            SaveFileDialog saveProgramDlg = new SaveFileDialog();
+
+            saveProgramDlg.Filter = "SOM file|*.som";
+            saveProgramDlg.RestoreDirectory = true;
+            saveProgramDlg.Title = "Save Program State As ...";
+
+            if (saveProgramDlg.ShowDialog() == DialogResult.OK)
+            {
+                System.IO.FileStream fs;
+                if ((fs = (System.IO.FileStream)saveProgramDlg.OpenFile()) != null)
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+
+                    // Serialise the algorithm state if possible
+                    formatter.Serialize(fs, m_AlgInstance);
+                    formatter.Serialize(fs, m_DisplayPanel);
+
+                    fs.Close();
+                }
+            }
+        }
+
+        private void loadProgramStateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog programStateOpenDlg = new OpenFileDialog();
+
+            programStateOpenDlg.Filter = "SOM files (*.som)|*.som|All files (*.*)|*.*";
+            programStateOpenDlg.RestoreDirectory = true;
+            programStateOpenDlg.Title = "Open Program State...";
+
+            if (programStateOpenDlg.ShowDialog() == DialogResult.OK)
+            {
+                System.IO.FileStream fs = (System.IO.FileStream)programStateOpenDlg.OpenFile();
+                BinaryFormatter formatter = new BinaryFormatter();
+
+                m_AlgInstance = (ISOM)formatter.Deserialize(fs);
+                m_DisplayPanel = (DisplayPanelDetails[])formatter.Deserialize(fs);
+
+                // Reconnect global variables
+                m_DataSource = (FileInputLayer)m_AlgInstance.InputReader;
+                for (int i = 0; i < m_DisplayPanel.Length; i++)
+                {
+                    m_DisplayPanel[i].pb = displayArea.GetPanelContents(i);
+                    m_DisplayPanel[i].GifAnimation = new GifAnimator();
+                    m_DisplayPanel[i].AnimationDrawer = new WinDrawer(animationWidth, animationHeight);
+                    m_DisplayPanel[i].PanelDrawer = new WinDrawer(m_DisplayPanel[i].pb.Size);
+
+                    // setup visualisers
+                    if (m_DisplayPanel[i].VisualiserName != null)
+                    {
+                        m_DisplayPanel[i].Visualiser = m_Visualisers.CreatePluginInstance(m_DisplayPanel[i].VisualiserName);
+                        m_DisplayPanel[i].Visualiser.Drawer = m_DisplayPanel[i].PanelDrawer;
+                        m_DisplayPanel[i].AnimationVisualiser = m_Visualisers.CreatePluginInstance(m_DisplayPanel[i].VisualiserName);
+                        m_DisplayPanel[i].AnimationVisualiser.Drawer = m_DisplayPanel[i].AnimationDrawer;
+
+                        // draw maps
+                        m_DisplayPanel[i].Visualiser.VisualiseMap(m_AlgInstance);
+                        m_DisplayPanel[i].pb.Image = (Image)m_DisplayPanel[i].PanelDrawer.GetImage().Clone();
+
+                    }
+                }
+
+                displayArea.Refresh();
+
+                m_CreateAlgInstance = false;
+                algorithmLB.SelectedIndex = -1;
+                algorithmLB.SelectedItem = m_AlgInstance.GetType().Name;
+                neuronMapTypeCB.SelectedIndex = -1;
+                neuronMapTypeCB.SelectedItem = m_AlgInstance.Map.GetType().Name;
+                m_CreateAlgInstance = true;
+            }
+        }
+
+        private void neuronMapTypeCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (m_CreateMapInstance)
+            {
+                if (neuronMapTypeCB.Items.Count > 0)
+                    m_CurrentMap = m_NeuronMaps.CreatePluginInstance((string)neuronMapTypeCB.SelectedItem);
+            }
+            if (m_DataSource != null)
+                m_CurrentMap.InputDimension = m_DataSource.InputDimension;
+            if (m_AlgInstance != null)
+                m_AlgInstance.Map = m_CurrentMap;
+
+
+            m_NeuronMapParameters = m_NeuronMaps.CompilePropertyControls((string)neuronMapTypeCB.SelectedItem, m_CurrentMap);
+            neuronMapPropPanel.Controls.Clear();
+            neuronMapPropPanel.Controls.Add(PropertyTable(m_NeuronMapParameters, m_CurrentMap));
+
+        }
+
+        private void writeMapVectorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((m_AlgInstance == null) || (m_AlgInstance.Map == null))
+            {
+                MessageBox.Show("No map to write!!!");
+                return;
+            }
+
+            SaveFileDialog saveProgramDlg = new SaveFileDialog();
+
+            saveProgramDlg.Filter = "Neuron map file|*.map";
+            saveProgramDlg.RestoreDirectory = true;
+            saveProgramDlg.Title = "Save neuron map as ...";
+
+            if (saveProgramDlg.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter sw = new StreamWriter((System.IO.FileStream)saveProgramDlg.OpenFile());
+                MathLib.Matrices.Matrix weights = m_AlgInstance.Map.Weights;
+
+                sw.Write(weights.ToString());
+
+                sw.Close();
+            }
+        }
+
+        private void saveMapMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!m_CurrentMap.GetType().IsSerializable)
+            {
+                MessageBox.Show("Current map doesn't support saving its" +
+                    " state.", "Error", MessageBoxButtons.OK);
+                return;
+            }
+
+            SaveFileDialog saveMapDlg = new SaveFileDialog();
+
+            saveMapDlg.Filter = "SOM NeuronMap file|*.nmap";
+            saveMapDlg.RestoreDirectory = true;
+            saveMapDlg.Title = "Save map state As ...";
+
+            if (saveMapDlg.ShowDialog() == DialogResult.OK)
+            {
+                System.IO.FileStream fs = (System.IO.FileStream)saveMapDlg.OpenFile();
+                BinaryFormatter formatter = new BinaryFormatter();
+
+                // Serialise the map state if possible
+                formatter.Serialize(fs, m_AlgInstance.Map);
+
+                fs.Close();
+            }
+        }
+
+        private void loadMapMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog mapStateOpenDlg = new OpenFileDialog();
+
+            mapStateOpenDlg.Filter = "SOM neural map files (*.nmap)|*.nmap|All files (*.*)|*.*";
+            mapStateOpenDlg.RestoreDirectory = true;
+            mapStateOpenDlg.Title = "Open Map State...";
+
+            if (mapStateOpenDlg.ShowDialog() == DialogResult.OK)
+            {
+                System.IO.FileStream fs = (System.IO.FileStream)mapStateOpenDlg.OpenFile();
+                BinaryFormatter formatter = new BinaryFormatter();
+
+                m_CurrentMap = (NeuronMap)formatter.Deserialize(fs);
+
+                m_CreateMapInstance = false;
+                neuronMapTypeCB.SelectedIndex = -1;
+                neuronMapTypeCB.SelectedItem = m_CurrentMap.GetType().Name;
+                m_CreateMapInstance = true;
+
+                VisualiseMaps();
+            }
+
+        }
+
+        private void randomInput_CheckedChanged(object sender, EventArgs e)
+        {
+            if (randomInput.Checked)
+                m_DataSource.RandomizeInput = true;
+            else
+                m_DataSource.RandomizeInput = false;
+        }
+
+        private void attachVisBtn_Click(object sender, EventArgs e)
+        {
+            if (visualiserLB.SelectedIndex == -1)
+                return;
+
+            m_DisplayPanel[m_SelectedPanel].VisualiserName = (string)visualiserLB.SelectedItem;
+
+            m_DisplayPanel[m_SelectedPanel].Visualiser =
+                m_Visualisers.CreatePluginInstance((string)visualiserLB.SelectedItem);
+            m_DisplayPanel[m_SelectedPanel].Visualiser.Drawer =
+                m_DisplayPanel[m_SelectedPanel].PanelDrawer;
+            m_DisplayPanel[m_SelectedPanel].AnimationVisualiser =
+                m_Visualisers.CreatePluginInstance((string)visualiserLB.SelectedItem);
+            m_DisplayPanel[m_SelectedPanel].AnimationVisualiser.Drawer =
+                m_DisplayPanel[m_SelectedPanel].AnimationDrawer;
+
+            UpdateVisualiserProperties();
+
+            VisualiseMaps();
+
+        }
+
+        private void detachVisualiserBtn_Click(object sender, EventArgs e)
+        {
+            m_DisplayPanel[m_SelectedPanel].Visualiser = null;
+            m_DisplayPanel[m_SelectedPanel].AnimationVisualiser = null;
+
+            detachVisualiserBtn.Enabled = false;
+            UpdateVisualiserProperties();
+
+            VisualiseMaps();
+        }
+    }
+}

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SOMSimulator.MainForm">
+    <Position X="1" Y="1.75" Width="2.25" />
+    <Members>
+      <Field Name="algorithmLB" Hidden="true" />
+      <Field Name="algorithmPanel" Hidden="true" />
+      <Field Name="algPropGB" Hidden="true" />
+      <Field Name="animationControls" Hidden="true" />
+      <Field Name="animFilenameTB" Hidden="true" />
+      <Field Name="attachVisBtn" Hidden="true" />
+      <Field Name="cancelBtn" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="displayArea" Hidden="true" />
+      <Field Name="displayPanel" Hidden="true" />
+      <Field Name="fileToolStripMenuItem" Hidden="true" />
+      <Field Name="infoTB" Hidden="true" />
+      <Field Name="inputSourceToolStripMenuItem" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label10" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="loadMapMenuItem" Hidden="true" />
+      <Field Name="loadProgramStateToolStripMenuItem" Hidden="true" />
+      <Field Name="menuStrip" Hidden="true" />
+      <Field Name="neuronMapPropGB" Hidden="true" />
+      <Field Name="neuronMapPropPanel" Hidden="true" />
+      <Field Name="neuronMapTypeCB" Hidden="true" />
+      <Field Name="openFileToolStripMenuItem" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="quitToolStripMenuItem" Hidden="true" />
+      <Field Name="randomInput" Hidden="true" />
+      <Field Name="recordAnimCheckBox" Hidden="true" />
+      <Field Name="resetBtn" Hidden="true" />
+      <Field Name="saveImageBtn" Hidden="true" />
+      <Field Name="saveMapMenuItem" Hidden="true" />
+      <Field Name="saveProgramStateToolStripMenuItem" Hidden="true" />
+      <Field Name="scanAssemblyToolStripMenuItem" Hidden="true" />
+      <Field Name="SelectAnimFileBtn" Hidden="true" />
+      <Field Name="simulateToolStripMenuItem" Hidden="true" />
+      <Field Name="splitContainer1" Hidden="true" />
+      <Field Name="tableLayoutPanel1" Hidden="true" />
+      <Field Name="tableLayoutPanel2" Hidden="true" />
+      <Field Name="timer1" Hidden="true" />
+      <Field Name="toolStripContainer1" Hidden="true" />
+      <Field Name="toolStripSeparator1" Hidden="true" />
+      <Field Name="trainBtn" Hidden="true" />
+      <Field Name="trainToolStripMenuItem" Hidden="true" />
+      <Field Name="updateIntervalUpDown" Hidden="true" />
+      <Field Name="visPropGB" Hidden="true" />
+      <Field Name="visualiserLabel" Hidden="true" />
+      <Field Name="visualiserLB" Hidden="true" />
+      <Field Name="visualiserPropPanel" Hidden="true" />
+      <Field Name="writeMapVectorsToolStripMenuItem" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Struct Name="SOMSimulator.MainForm.DisplayPanelDetails" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MainForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ta4wFgHWo2hAEjUCCCvWsCIDCiEIAY2pCWINUYChDSM=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="m_AlgorithmParameters" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SOMSimulator.SOMPluginProperty" Collapsed="true">
+    <Position X="5.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACQAAQEhAAIRIAAAAAZAAAEEAAABAAAUAEAAgAA=</HashCode>
+      <FileName>SOMPluginProperty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Type" Collapsed="true">
+    <Position X="5.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SOMSimulator.PluginRegistry&lt;PluginType&gt;">
+    <Position X="7.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAABAAAAAAAIAAAAAQAAAIAAAAAAAAAACAAA=</HashCode>
+      <FileName>PluginRegistry.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_plugins" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SOMSimulator.PluginDetails">
+    <Position X="11.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAEAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>PluginDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

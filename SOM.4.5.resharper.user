@@ -1,0 +1,66 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="using" priority="0" />
+      <Item value="c" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MathLib.Matrices.MatrixCreationOption">
+      <Item value="Zeros" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.Vector">
+      <Item value="MinIndex" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="22693C6B-849C-4319-AD00-0F752F3B12EE/d:Algorithms/f:PLSOM.cs" caret="3743" fromTop="18" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:Vector.cs" caret="8214" fromTop="4" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:MatrixMath.cs" caret="3093" fromTop="12" />
+      <File id="22693C6B-849C-4319-AD00-0F752F3B12EE/d:Visualisers/f:VectorFieldVisualiser.cs" caret="1751" fromTop="14" />
+      <File id="22693C6B-849C-4319-AD00-0F752F3B12EE/f:NeuronMap.cs" caret="957" fromTop="14" />
+      <File id="22693C6B-849C-4319-AD00-0F752F3B12EE/d:Algorithms/f:SOMVariant2.cs" caret="11903" fromTop="24" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexVector.cs" caret="18814" fromTop="14" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:General/f:BasicMath.cs" caret="0" fromTop="0" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:FFT/f:Fourier.cs" caret="3778" fromTop="14" />
+      <File id="E7F18D6E-37B8-4C9E-84EA-0128FF636B51/f:MainForm.cs" caret="18401" fromTop="19" />
+      <File id="22693C6B-849C-4319-AD00-0F752F3B12EE/f:FileInputLayer.cs" caret="2124" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexVector.cs" caret="18046" fromTop="27" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexVector.cs" caret="18858" fromTop="29" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexVector.cs" caret="18411" fromTop="13" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:ComplexVector.cs" caret="18814" fromTop="20" />
+      <File id="22693C6B-849C-4319-AD00-0F752F3B12EE/d:Algorithms/f:SOMVariant2.cs" caret="10417" fromTop="14" />
+      <File id="22693C6B-849C-4319-AD00-0F752F3B12EE/d:Algorithms/f:SOMVariant2.cs" caret="178" fromTop="6" />
+      <File id="22693C6B-849C-4319-AD00-0F752F3B12EE/d:Algorithms/f:SOMVariant2.cs" caret="10835" fromTop="3" />
+      <File id="22693C6B-849C-4319-AD00-0F752F3B12EE/d:Algorithms/f:SOMVariant2.cs" caret="11888" fromTop="1" />
+      <File id="22693C6B-849C-4319-AD00-0F752F3B12EE/f:NeuronMap.cs" caret="662" fromTop="6" />
+      <File id="22693C6B-849C-4319-AD00-0F752F3B12EE/f:NeuronMap.cs" caret="584" fromTop="1" />
+      <File id="22693C6B-849C-4319-AD00-0F752F3B12EE/f:NeuronMap.cs" caret="2063" fromTop="14" />
+      <File id="22693C6B-849C-4319-AD00-0F752F3B12EE/f:NeuronMap.cs" caret="957" fromTop="14" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:MatrixMath.cs" caret="679" fromTop="14" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:MatrixMath.cs" caret="3517" fromTop="23" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:MatrixMath.cs" caret="2145" fromTop="20" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:MatrixMath.cs" caret="1718" fromTop="6" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:MatrixMath.cs" caret="2729" fromTop="2" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Matrices/f:MatrixMath.cs" caret="3229" fromTop="17" />
+      <File id="22693C6B-849C-4319-AD00-0F752F3B12EE/d:Algorithms/f:PLSOM.cs" caret="3705" fromTop="14" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+</Configuration>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MathLib.Matrices.Matrix&lt;TValueType&gt;" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Matrices\GenericMatrix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MathLib.Matrices.DenseMatrixBase&lt;TMatrixType, TVectorType, TValueType&gt;" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCQAgIAAAAAAAF6AUAQCCAAIABAIAAAAoAAAgAIiA=</HashCode>
+      <FileName>Matrices\DenseMatrixBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MathLib.Matrices.MatrixBase&lt;TMatrixType, TVectorType, TValueType&gt;" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEQCQAAICAAAAEAACAQAQCCAAAABAAAAkAIQCAgAIAA=</HashCode>
+      <FileName>Matrices\MatrixBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MathLib.Matrices.ComplexMatrix" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Matrices\ComplexMatrix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MathLib.Matrices.Matrix" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAEAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Matrices\Matrix.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MathLib.Matrices.SparseMatrixBase&lt;TMatrixType, TVectorType, TValueType&gt;" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAYCQIAIQQAAAIAF6AUDQCCAAIIBAIAAAAI0AMgAIiA=</HashCode>
+      <FileName>Matrices\SparseMatrixBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MathLib.Matrices.SparseMatrix&lt;TValueType&gt;" Collapsed="true">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Matrices\GenericSparseMatrix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MathLib.Matrices.SparseMatrix" Collapsed="true">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Matrices\SparseMatrix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MathLib.Matrices.ComplexSparseMatrix" Collapsed="true">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Matrices\ComplexSparseMatrix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
