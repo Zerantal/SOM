@@ -10,7 +10,7 @@ namespace SomLibrary.NeuronMaps
     /// 3d map using a hexagonal lattice.    
     /// </summary>
     [Serializable]
-    [SOMPluginDetail("3D Hexagonal Map", "3D Hexagonal lattice")]
+    //[SOMPluginDetail("3D Hexagonal Map", "3D Hexagonal lattice")]
     public class HexNeuronMap : INeuronMapWithWeightEnum 
     {
         protected int XDim;

@@ -4,7 +4,7 @@ using SomLibrary.NeuronMaps;
 
 namespace SomLibrary.Algorithms
 {    
-    [SOMPluginDetail("GSOM", "The Growing Self-Organising Map", typeof(GrowingRectNeuronMap))]
+//    [SOMPluginDetail("GSOM", "The Growing Self-Organising Map", typeof(GrowingRectNeuronMap))]
     [Serializable]
     public sealed partial class GSOM : ISOM
     {        

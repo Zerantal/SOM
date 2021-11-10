@@ -342,8 +342,12 @@ namespace SOMSimulator
 
         private void UpdateVisualiserProperties()
         {
+
             DisplayInfo info = CurrentCellInfo;
-            
+
+            if (info.Visualiser == null)
+                return;
+
             animationControls.Enabled = true;
             visualiserLabel.Text = info.Visualiser.GetType().Name;
             animFilenameTB.Text = info.AnimationFilename;

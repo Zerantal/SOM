@@ -5,7 +5,7 @@ using SomLibrary.NeuronMaps;
 
 namespace SomLibrary.Visualisers
 {
-    [SOMPluginDetail("GSOM Geometry Visualiser", "Plots the neuron positions of all neurons in map")]
+    //[SOMPluginDetail("GSOM Geometry Visualiser", "Plots the neuron positions of all neurons in map")]
     public class GSOMGeometryVisualiser : IVisualiser
     {
         private bool CanVisualiseMap(ISOM algorithm, out string errMsg)

@@ -8,7 +8,7 @@ using Util;
 namespace SomLibrary.Algorithms
 {    
     [Serializable]
-    [SOMPluginDetail("PLSOM2", "Improved PLSOM from the creators of the original PLSOM")]
+ //   [SOMPluginDetail("PLSOM2", "Improved PLSOM from the creators of the original PLSOM")]
     public partial class PLSOM2 : ISOM
     {        
         [Serializable]

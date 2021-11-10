@@ -9,7 +9,7 @@ namespace SomLibrary.NeuronMaps
 {
 
     [Serializable]
-    [SOMPluginDetail("2D Growing Rectangular Map", "2D rectangular growing map used by the GSOM")]
+ //   [SOMPluginDetail("2D Growing Rectangular Map", "2D rectangular growing map used by the GSOM")]
     public class GrowingRectNeuronMap : INeuronMapWithWeightEnum
     {        
         

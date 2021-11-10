@@ -22,8 +22,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOMLibraryTests", "SOMLibraryTests\SOMLibraryTests.csproj", "{E5E453EE-67D8-4CDB-8BE3-3D9EA7A464CA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLib", "MathLib\MathLib.csproj", "{06119B37-8AB7-47AC-A943-672FEEEEC597}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util", "Util\Util.csproj", "{1E22CAC4-8E90-4DD7-A754-6D1EF0845230}"
@@ -42,10 +40,6 @@ Global
 		{22693C6B-849C-4319-AD00-0F752F3B12EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22693C6B-849C-4319-AD00-0F752F3B12EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22693C6B-849C-4319-AD00-0F752F3B12EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E5E453EE-67D8-4CDB-8BE3-3D9EA7A464CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E5E453EE-67D8-4CDB-8BE3-3D9EA7A464CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E5E453EE-67D8-4CDB-8BE3-3D9EA7A464CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E5E453EE-67D8-4CDB-8BE3-3D9EA7A464CA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{06119B37-8AB7-47AC-A943-672FEEEEC597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{06119B37-8AB7-47AC-A943-672FEEEEC597}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06119B37-8AB7-47AC-A943-672FEEEEC597}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -59,9 +53,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {03B9EB63-4D22-4DC7-96D4-5A9028B2BCF6}
-		CodeStyleEnforcer_RulesLocation = 0
 		CodeStyleEnforcer_Active = -1
+		CodeStyleEnforcer_RulesLocation = 0
+		SolutionGuid = {03B9EB63-4D22-4DC7-96D4-5A9028B2BCF6}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = SOM.vsmdi

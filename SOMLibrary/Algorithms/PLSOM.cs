@@ -7,7 +7,7 @@ using Util;
 namespace SomLibrary.Algorithms
 {
     [Serializable]
-    [SOMPluginDetail("PLSOM", "Parameterless SOM: Algorithm developed by Erik Berglund and Joaquin Sitte")]
+ //   [SOMPluginDetail("PLSOM", "Parameterless SOM: Algorithm developed by Erik Berglund and Joaquin Sitte")]
     public partial class PLSOM : ISOM
     {        
         #region Fields (6)

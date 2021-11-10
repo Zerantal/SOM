@@ -7,7 +7,7 @@ using SomLibrary.NeuronMaps;
 
 namespace SomLibrary.Visualisers
 {
-    [SOMPluginDetail("Voronoi Region Visualiser", "Plots the voronoi regions of the map vectors")]
+    //[SOMPluginDetail("Voronoi Region Visualiser", "Plots the voronoi regions of the map vectors")]
     public class VoronoiRegionsVisualiser : IVisualiser
     {
         private string _errMsg;
